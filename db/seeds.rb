@@ -6,10 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Course.create(name: "This is a test")
+puts "clean data"
 
-puts "#{Course.all.count} was created"
+Booking.destroy_all
+Course.destroy_all
+User.destroy_all
 
-User.create(email: "max@fount.io", password: "leWagon1234", first_name: "Tom", last_name: "The Boy")
+puts "insert data"
 
-puts "#{User.all.count} was created"
+User.create(email: "student@fount.io", password: "student123", first_name: "Tom", last_name: "Student")
+User.create(email: "teacher@fount.io", password: "teacher123", first_name: "Tim", last_name: "Teacher")
+
+puts "#{User.all.count} users were created"
+
+Course.create(name: "Rock Climbing 101", user_id: 2)
+puts "#{Course.all.count} courses were created"
+
+Booking.create(user_id: 1, course_id: 1)
+puts "#{Course.all.count} bookings were created"
