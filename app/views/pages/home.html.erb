@@ -12,27 +12,35 @@
 
   <h1>Featured Courses</h1>
 
-  <div class="wrapper">
+<div class="my-card-wrapper">
     <% @courses.each do |course| %>
-
-    <div class="my-card">
-      <div class="my-card-img"><%= cl_image_tag course.photo.key if course.photo.attached? %></div>
-
-      <div class="my-card-info">
-        <strong><%= course.name%></strong>
-        <p><%= course.description%></p>
-        <div class="my-card-footer"></div>
-          <div class="my-card-details">
-            <%= course.price%>
-            <%= course.location%>
+      <%= link_to course_path(course) do %>
+        <div class="my-card">
+          <div class="my-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path course.photo.key, crop: :fill if course.photo.attached? %>')"></div>
+          <div class="my-card-info">
+            <div class="my-card-main">
+              <strong><%= course.name%></strong>
+              <p><%= course.description%></p>
+            </div>
+            <div class="my-card-footer">
+              <div class="my-card-price">
+                💰 <%= course.price %> €
+              </div>
+              <div class="my-card-location">
+                🗺 <%= course.location%>
+              </div>
+              <% user = User.find(course.user_id)%>
+              <div class="my-user-info">
+                <%= cl_image_tag course.user.photo.key, class: "my-avatar" if course.photo.attached? %>
+                <div class="my-user-name">
+                  <%= user.first_name%>
+                  <%= user.last_name%>
+                </div>
+              </div>
+            </div>
           </div>
-          <% user = User.find(course.user_id)%>
-          <div class="my-user-avatar">
-            <%= user.first_name%>
-            <%= user.last_name%>
-          </div>
-      </div>
-    </div>
+        </div>
+      <% end %>
     <% end  %>
   </div>
 </div>
