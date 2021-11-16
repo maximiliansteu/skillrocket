@@ -15,10 +15,37 @@ User.destroy_all
 
 puts "insert data"
 
-student_one = User.create!(email: "student@fount.io", password: "student123", first_name: "Tom", last_name: "Student")
-teacher_one = User.create!(email: "teacher@fount.io", password: "teacher123", first_name: "Tim", last_name: "Teacher")
-teacher_two = User.create!(email: "teacher2@fount.io", password: "teacher123", first_name: "Tim", last_name: "Teacher")
-teacher_three = User.create!(email: "teacher3@fount.io", password: "teacher123", first_name: "John", last_name: "Teacher")
+student_one = User.create!(email: "student@fount.io",
+                           password: "student123",
+                           first_name: "Tom",
+                           last_name: "Student")
+
+file = URI.open('https://source.unsplash.com/rDEOVtE7vOs')
+student_one.photo.attach(io: file, filename: 'student_one.png', content_type: 'image/png')
+
+teacher_one = User.create!(email: "teacher@fount.io",
+                           password: "teacher123",
+                           first_name: "Tim",
+                           last_name: "Teacher")
+
+file = URI.open('https://source.unsplash.com/X6Uj51n5CE8')
+teacher_one.photo.attach(io: file, filename: 'teacher_one.png', content_type: 'image/png')
+
+teacher_two = User.create!(email: "teacher2@fount.io",
+                           password: "teacher123",
+                           first_name: "Tim",
+                           last_name: "Teacher")
+
+file = URI.open('https://source.unsplash.com/cdksyTqEXzo')
+teacher_two.photo.attach(io: file, filename: 'teacher_two.png', content_type: 'image/png')
+
+teacher_three = User.create!(email: "teacher3@fount.io",
+                             password: "teacher123",
+                             first_name: "John",
+                             last_name: "Teacher")
+
+file = URI.open('https://source.unsplash.com/HD8KlyWRYYM')
+teacher_three.photo.attach(io: file, filename: 'teacher_three.png', content_type: 'image/png')
 
 puts "#{User.all.count} users were created"
 
