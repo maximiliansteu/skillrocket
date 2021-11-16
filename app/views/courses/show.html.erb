@@ -1,1 +1,24 @@
-<h1>Course Show</h1>
+
+<div class="container">
+   <%= link_to  @course.category, "#", class: "category-link" %>
+  <h1><%= @course.name %></h1>
+  <%= @course.description %>
+
+  <%= @course.price %>
+  <%= @course.content %>
+  <%= @course.location %>
+   <div style="width: 120px">
+    <%= link_to 'Join course now', "#", class: "button", style: "display: block" %>
+  </div>
+
+  <div class="overview">
+    <h3>Overview</h3>
+    <div>
+      <%= @course.content %>
+    </div>
+  </div>
+
+</div>
+
+<!-- app/views/articles/show.html.erb -->
+<%# <%= cl_image_tag @course.photo.key, height: 300, width: 400, crop: :fill %>
