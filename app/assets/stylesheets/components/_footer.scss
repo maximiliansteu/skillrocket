@@ -2,13 +2,24 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: gray;
+  background-color: #21046a;
   color: white;
   padding: 30px;
+  margin-top: 100px;
 
 
 }
 
 .footer li {
+  margin-top: 10px;
   list-style-type: none;
+}
+
+li:first-child {
+    margin-top:0;
+}
+
+#footer-logo {
+  margin-left: 1200px;
+  filter: brightness(0) invert(1);
 }
