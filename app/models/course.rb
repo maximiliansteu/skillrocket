@@ -6,6 +6,7 @@ class Course < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
+  validates :content, presence: true
   validates :location, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
 end

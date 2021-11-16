@@ -5,6 +5,13 @@ en:
     required:
       text: 'required'
       mark: '*'
+    placeholders:
+      course:
+        name: 'What is the name of your course?'
+        description: 'Write a brief description about your course?'
+        content: 'What does your course teach?'
+        location: 'Where does your course take place?'
+        price: 'What is the course price per day?'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
