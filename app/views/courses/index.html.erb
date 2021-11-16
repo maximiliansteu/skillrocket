@@ -21,9 +21,11 @@
               </div>
               <% user = User.find(course.user_id)%>
               <div class="my-user-info">
-                <%= cl_image_tag course.photo.key, class: "avatar" if course.photo.attached? %>
-                <%= user.first_name%>
-                <%= user.last_name%>
+                <%= cl_image_tag course.user.photo.key, class: "my-avatar" if course.photo.attached? %>
+                <div class="my-user-name">
+                  <%= user.first_name%>
+                  <%= user.last_name%>
+                </div>
               </div>
             </div>
           </div>

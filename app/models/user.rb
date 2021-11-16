@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :courses, dependent: :destroy
   has_many :bookings, dependent: :destroy
   has_many :received_bookings, through: :courses, source: :bookings # -> for the teacher
+  has_one_attached :photo
 end
