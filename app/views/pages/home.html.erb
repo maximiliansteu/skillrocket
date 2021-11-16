@@ -2,19 +2,39 @@
 <div class="hero-image">
   <div class="hero-text">
     <h1>Learn A New Skill</h1>
-    <button>View all courses</button>
+    <%= link_to 'View all courses', courses_path, class: "button" %>
+
   </div>
 </div>
 
 
-<div class="cards">
-  <ul>
-    <h2><li>HERE GOES CARDS</li></h2>
-    <h2><li>HERE GOES CARDS</li></h2>
-    <h2><li>HERE GOES CARDS</li></h2>
-    <h2><li>HERE GOES CARDS</li></h2>
-    <h2><li>HERE GOES CARDS</li></h2>
-  </ul>
+<div class="container">
+
+  <h1>Featured Courses</h1>
+
+  <div class="wrapper">
+    <% @courses.each do |course| %>
+
+    <div class="my-card">
+      <div class="my-card-img"><%= cl_image_tag course.photo.key if course.photo.attached? %></div>
+
+      <div class="my-card-info">
+        <strong><%= course.name%></strong>
+        <p><%= course.description%></p>
+        <div class="my-card-footer"></div>
+          <div class="my-card-details">
+            <%= course.price%>
+            <%= course.location%>
+          </div>
+          <% user = User.find(course.user_id)%>
+          <div class="my-user-avatar">
+            <%= user.first_name%>
+            <%= user.last_name%>
+          </div>
+      </div>
+    </div>
+    <% end  %>
+  </div>
 </div>
 
 <div class="footer">
