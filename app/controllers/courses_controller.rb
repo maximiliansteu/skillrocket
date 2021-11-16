@@ -1,7 +1,14 @@
 class CoursesController < ApplicationController
 
+  before_action :set_course, only: :show
+
+  def show
+  end
+
+
   def index
     @courses = Course.all
+
   end
 
   def new
@@ -18,6 +25,10 @@ class CoursesController < ApplicationController
   end
 
   private
+
+  def set_course
+    @course = Course.find(params[:id])
+  end
 
   def course_params
     params.require(:course).permit(:name, :description, :price, :content, :category, :location, :user_id, :photo)
