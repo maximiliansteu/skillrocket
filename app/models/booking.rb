@@ -8,6 +8,6 @@ class Booking < ApplicationRecord
   # private
 
   # def set_total_price
-  #   self.total_price = (end_date - start_date).to_i * price
+  #   self.total_price = (end_date - start_date).to_i * course.price
   # end
 end
