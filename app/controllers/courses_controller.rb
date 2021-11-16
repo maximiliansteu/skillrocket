@@ -1,7 +1,14 @@
 class CoursesController < ApplicationController
+
   before_action :set_course, only: :show
 
   def show
+  end
+
+
+  def index
+    @courses = Course.all
+
   end
 
   def new
