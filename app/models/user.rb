@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :courses
   has_many :bookings
+  has_many :received_bookings, through: :courses, source: :bookings # -> for the teacher
 end
