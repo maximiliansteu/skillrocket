@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :courses
-  has_many :bookings
+  has_many :courses, dependent: :destroy
+  has_many :bookings, dependent: :destroy
   has_many :received_bookings, through: :courses, source: :bookings # -> for the teacher
 end
