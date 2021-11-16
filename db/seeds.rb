@@ -16,10 +16,42 @@ puts "insert data"
 
 User.create(email: "student@fount.io", password: "student123", first_name: "Tom", last_name: "Student")
 User.create(email: "teacher@fount.io", password: "teacher123", first_name: "Tim", last_name: "Teacher")
+User.create(email: "teacher@fount.io", password: "teacher123", first_name: "Tim", last_name: "Teacher")
+User.create(email: "teacher2@fount.io", password: "teacher123", first_name: "John", last_name: "Teacher")
 
 puts "#{User.all.count} users were created"
 
-Course.create(name: "Rock Climbing 101", user_id: 2)
+Course.create(name: "Rock Climbing 101",
+              description: "This is about how you learn to rockclimb",
+              price: 20,
+              category: "Sports",
+              location: "Barcelona, Spain",
+              user_id: 2)
+Course.create(name: "Learn CSS",
+              description: "CSS helps you for all kind of styling",
+              price: 30,
+              category: "Coding",
+              location: "Madrid, Spain",
+              user_id: 2)
+Course.create(name: "Become a better writer",
+              description: "Writing is a superpower that we all benefit from",
+              price: 25,
+              category: "Writing",
+              location: "Denmark, Copenhagen",
+              user_id: 3)
+Course.create(name: "Integrated Mindfulness",
+              description: "Mindfulness helps you to become the best version of yourself",
+              price: 28,
+              category: "Mental Health",
+              location: "Remote",
+              user_id: 3)
+Course.create(name: "Start you own company",
+              description: "How to actually create a new company. Not as hard as you think.",
+              price: 25,
+              category: "Business",
+              location: "Remote",
+              user_id: 3)
+
 puts "#{Course.all.count} courses were created"
 
 Booking.create(user_id: 1, course_id: 1)
