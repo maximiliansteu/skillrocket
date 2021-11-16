@@ -65,3 +65,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Manually added gems
 
 gem 'devise'
+
+# to store cloudinary key
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+#cloudinary gemfile
+
+gem 'cloudinary', '~> 1.16.0'
