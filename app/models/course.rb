@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  has_one :user
+  belongs_to :user
   has_one_attached :photo
 
   CATEGORIES = ["Sports", "Coding", "Writing", "Mental Health", "Business", "Gardening", "Fitness", "Crypto", "Design", "Fashion"]
