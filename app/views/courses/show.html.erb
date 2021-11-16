@@ -1,26 +1,35 @@
 
-<div class="container">
-   <%= link_to  @course.category, "#", class: "category-link" %>
-  <h1><%= @course.name %></h1>
-  <%= @course.description %>
-
-  <%= @course.price %>
-  <%= @course.location %>
-   <div style="width: 120px">
-    <%= link_to 'Join course now', "#", class: "button", style: "display: block" %>
-  </div>
-
-  </div>
-
-</div>
-  <div class="overview">
-  <div class="container">
-
-    <h3>Overview</h3>
-    <div>
-      <%= @course.content %>
+<div class="relative">
+  <div class="show-hero-image" style="background-image: <%= @course.photo %>">
+      <span>/ <%= link_to  @course.category, "#", class: "category-link" %></span>
+      <div class="show-hero-text">
+        <h1><%= @course.name %></h1>
+      </div>
     </div>
-  </div>
 
-<!-- app/views/articles/show.html.erb -->
-<%# <%= cl_image_tag @course.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="overview">
+      <div class="container">
+          <h1><a href="#" class="tab-button">Overview</a></h1>
+          <%= @course.content %>
+      </div>
+    </div>
+    <%# <div class="overview"> %>
+      <%# <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="#">Overview</a>
+        <a class="nav-link" href="#">Price</a>
+        <a class="nav-link" href="#">Location</a> %>
+        <%# <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> %>
+      <%# </nav> %>
+    <%# </div> %>
+
+    <div class="date-picker-container">
+      <h1>When would you like to start?</h1>
+      <p>Start straight away and learn at your own pace. If the course hasn’t started yet you’ll see the future date listed below.</p>
+
+
+    </div>
+
+    <div class="info-button">
+      <%= link_to 'Join course now', "#", class: " button" %>
+    </div>
+</div>
