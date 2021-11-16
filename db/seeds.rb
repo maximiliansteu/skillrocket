@@ -26,30 +26,40 @@ Course.create(name: "Rock Climbing 101",
               price: 20,
               category: "Sports",
               location: "Barcelona, Spain",
+              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
               user_id: 2)
 Course.create(name: "Learn CSS",
               description: "CSS helps you for all kind of styling",
               price: 30,
               category: "Coding",
               location: "Madrid, Spain",
+              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
               user_id: 2)
 Course.create(name: "Become a better writer",
               description: "Writing is a superpower that we all benefit from",
               price: 25,
               category: "Writing",
               location: "Denmark, Copenhagen",
+              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
               user_id: 3)
 Course.create(name: "Integrated Mindfulness",
               description: "Mindfulness helps you to become the best version of yourself",
               price: 28,
               category: "Mental Health",
               location: "Remote",
+              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
               user_id: 3)
 Course.create(name: "Start you own company",
               description: "How to actually create a new company. Not as hard as you think.",
               price: 25,
               category: "Business",
               location: "Remote",
+              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
               user_id: 3)
 
 puts "#{Course.all.count} courses were created"

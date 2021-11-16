@@ -1,0 +1,15 @@
+<h1>ADD A NEW COURSE</h1>
+
+<%= simple_form_for [ @course ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :content %>
+  <%= f.input :category %>
+  <%= f.input :location %>
+  <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Add course", class: "btn btn-primary" %>
+<% end %>
+
+<%# <%= render 'form', list: @list %> %>
+<%= link_to 'Back', courses_path %>
