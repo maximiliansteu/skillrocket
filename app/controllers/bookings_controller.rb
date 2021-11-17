@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
 
     @booking.course = @course
     if @booking.save!
-      redirect_to course_path(@course)
+      redirect_to dashboard_path
     else
       render :new
     end

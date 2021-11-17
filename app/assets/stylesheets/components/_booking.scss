@@ -1,10 +1,12 @@
 #max-booking-header {
   margin-top: 30px;
+  font-size: 23px;
 }
 
 .max-booking-container {
   width: 800px;
   margin: 0px auto;
+  margin-bottom: 100px;
 }
 
 .booking-testing {
@@ -18,6 +20,7 @@
     // box-shadow: 0px 0px 2px 2px purple;
     transform: translateY(-2px);
   }
+  margin-bottom: 20px;
 }
 
 .max-booking-class-img {
@@ -29,7 +32,7 @@
 .max-booking-info {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: baseline;
   flex-grow: 1;
 }
 
@@ -39,4 +42,12 @@
 
 .my-received-bookings {
   margin: 20px 0 20px 0px;
+}
+
+.maxi-icon {
+  &:hover {
+  transform: translateY(-0.5px);
+  color: #E04AA5;
+  font-weight: bold;
+  }
 }
