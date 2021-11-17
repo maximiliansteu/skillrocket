@@ -18,7 +18,14 @@ puts "insert data"
 student_one = User.create!(email: "student@fount.io",
                            password: "student123",
                            first_name: "Tom",
-                           last_name: "Student")
+                           last_name: "Student",
+                           biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+                           Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
+                          country: "Spain",
+                          city: "Barcelona",
+                          instagram_handle: "https://instagram.com",
+                          linked_in_handle: "https://linkedin.com",
+                          homepage_url: "https://google.com")
 
 file = URI.open('https://source.unsplash.com/rDEOVtE7vOs')
 student_one.photo.attach(io: file, filename: 'student_one.png', content_type: 'image/png')
@@ -26,7 +33,14 @@ student_one.photo.attach(io: file, filename: 'student_one.png', content_type: 'i
 teacher_one = User.create!(email: "teacher@fount.io",
                            password: "teacher123",
                            first_name: "Tim",
-                           last_name: "Teacher")
+                           last_name: "Teacher",
+                            biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+                            Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
+                            country: "Spain",
+                            city: "Barcelona",
+                            instagram_handle: "https://instagram.com",
+                            linked_in_handle: "https://linkedin.com",
+                            homepage_url: "https://google.com")
 
 file = URI.open('https://source.unsplash.com/X6Uj51n5CE8')
 teacher_one.photo.attach(io: file, filename: 'teacher_one.png', content_type: 'image/png')
@@ -34,7 +48,14 @@ teacher_one.photo.attach(io: file, filename: 'teacher_one.png', content_type: 'i
 teacher_two = User.create!(email: "teacher2@fount.io",
                            password: "teacher123",
                            first_name: "Tim",
-                           last_name: "Teacher")
+                           last_name: "Teacher",
+                            biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+                            Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
+                            country: "Spain",
+                            city: "Madrid",
+                            instagram_handle: "https://instagram.com",
+                            linked_in_handle: "https://linkedin.com",
+                            homepage_url: "https://google.com")
 
 file = URI.open('https://source.unsplash.com/cdksyTqEXzo')
 teacher_two.photo.attach(io: file, filename: 'teacher_two.png', content_type: 'image/png')
@@ -42,7 +63,14 @@ teacher_two.photo.attach(io: file, filename: 'teacher_two.png', content_type: 'i
 teacher_three = User.create!(email: "teacher3@fount.io",
                              password: "teacher123",
                              first_name: "John",
-                             last_name: "Teacher")
+                             last_name: "Teacher",
+                              biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+                              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
+                              country: "Spain",
+                              city: "Madrid",
+                              instagram_handle: "https://instagram.com",
+                              linked_in_handle: "https://linkedin.com",
+                              homepage_url: "https://google.com")
 
 file = URI.open('https://source.unsplash.com/HD8KlyWRYYM')
 teacher_three.photo.attach(io: file, filename: 'teacher_three.png', content_type: 'image/png')
@@ -53,7 +81,7 @@ course_one = Course.create(name: "Rock Climbing 101",
                            description: "This is about how you learn to rockclimb",
                            price: 20,
                            category: "Sports",
-                           location: "Barcelona, Spain",
+                           location: "Carrer de Joaquim Ruyra, 08025, Barcelona, Spain",
                            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                            Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                            user: teacher_one)
@@ -65,7 +93,7 @@ course_two = Course.create!(name: "Learn CSS",
                             description: "CSS helps you for all kind of styling",
                             price: 30,
                             category: "Coding",
-                            location: "Madrid, Spain",
+                            location: "Carrer de Joaquim Ruyra, 08025, Barcelona, Spain",
                             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                             Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                             user: teacher_one)
@@ -77,7 +105,7 @@ course_three = Course.create!(name: "Become a better writer",
                               description: "Writing is a superpower that we all benefit from",
                               price: 25,
                               category: "Writing",
-                              location: "Denmark, Copenhagen",
+                              location: "Plaça Catalana, 08032, Barcelona, Spain",
                               content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                               Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                               user: teacher_two)
@@ -89,7 +117,7 @@ course_four = Course.create!(name: "Integrated Mindfulness",
                              description: "Mindfulness helps you to become the best version of yourself",
                              price: 28,
                              category: "Mental Health",
-                             location: "Remote",
+                             location: "Plaça Catalana, 08032 Barcelona",
                              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                              user: teacher_two)
@@ -101,7 +129,7 @@ course_five = Course.create!(name: "Start you own company",
                              description: "How to actually create a new company. Not as hard as you think.",
                              price: 25,
                              category: "Business",
-                             location: "Remote",
+                             location: "Baixada del Monestir, 9, 08034 Barcelona",
                              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                              user: teacher_three)

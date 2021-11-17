@@ -25,7 +25,6 @@
   h1 {
     font-size: 60px
   }
-
 }
 // content tabs
 .overview-container {
@@ -51,6 +50,7 @@
 .tab-buttons-container {
   display:flex
 }
+
 .main {
   h2 {
     display: block;
@@ -99,10 +99,11 @@
     display: flex;
     align-items: center;
     margin: 15px auto;
-    background: white;
+    background: rgba(231, 231, 231, 0.766);
     padding: 16px;
-    border: 1px solid rgb(235,235,235);
+    border: 1px solid rgba(231, 231, 231, 0.766);
     min-height: 90px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
   .review .review-content {
