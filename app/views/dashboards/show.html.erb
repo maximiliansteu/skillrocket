@@ -1,7 +1,6 @@
 <div class="max-booking-container">
-<h3 id="max-booking-header">Dashboard</h3>
   <div class="max-bookings">
-    <strong><p>My Bookings</p></strong>
+  <h3 id="max-booking-header">My Bookings</h3>
     <% @bookings.each do |booking| %>
       <div class="booking-testing">
         <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img" %>
@@ -11,13 +10,15 @@
           <p><%= booking.start_date %></p>
           <p><%= booking.end_date %></p>
           <p><%= booking.status %></p>
+          <i class="fas fa-check maxi-icon"></i>
+          <i class="fas fa-ban maxi-icon"></i>
         </div>
       </div>
     <% end  %>
   </div>
 
   <div class="my-received-bookings">
-    <strong><p>My Classes</p></strong>
+    <h3 id="max-booking-header">My Offers</h3>
     <% @received_bookings.each do |booking| %>
       <div class="booking-testing" >
         <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img"%>
@@ -27,6 +28,8 @@
           <p><%= booking.start_date %></p>
           <p><%= booking.end_date %></p>
           <p><%= booking.status %></p>
+          <i class="fas fa-check maxi-icon"></i>
+          <i class="fas fa-ban maxi-icon"></i>
         </div>
       </div>
     <% end  %>

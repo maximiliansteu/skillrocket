@@ -86,7 +86,7 @@
         </div>
       </div> %>
 
-      <%= simple_form_for [@course, @booking=Booking.new] do |f| %>
+      <%= simple_form_for [@course, @booking = Booking.new] do |f| %>
         <%= f.input :start_date, label: false%>
         <%= f.input :end_date, label: false%>
         <div class='price-calculator-container d-flex justify-content-around mt-2'>
