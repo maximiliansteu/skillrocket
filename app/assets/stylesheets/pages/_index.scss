@@ -1,3 +1,27 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "course_show";
+
+.map-card-container {
+  display: flex;
+  width: 100%;
+
+}
+
+.map-big-container {
+  margin: 0;
+
+
+}
+
+#map-wrapper {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+#my-card-container {
+  width: 95vw!important;
+}
