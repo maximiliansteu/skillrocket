@@ -112,4 +112,5 @@ course_five.photo.attach(io: file, filename: 'company.png', content_type: 'image
 puts "#{Course.all.count} courses were created"
 
 Booking.create!(user: student_one, course: course_one, start_date: Date.today, end_date: Date.today + 5)
+Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
 puts "#{Booking.all.count} bookings were created"
