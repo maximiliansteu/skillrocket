@@ -21,7 +21,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: white !important;
 }
 
 
@@ -46,5 +46,6 @@
   left: 5%;
   h1 {
     font-size: 3.5em;
+    color: white !important;
   }
 }
