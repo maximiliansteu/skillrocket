@@ -1,8 +1,8 @@
-<div class="my-card-container">
+<div class="my-card-container" id="my-card-container">
 
   <h2 id="my-header">Discover our courses!</h2>
-
-  <div class="my-card-wrapper">
+  <div class="map-card-container">
+  <div class="my-card-wrapper" id="map-wrapper">
     <% @courses.each do |course| %>
       <%= link_to course_path(course) do %>
         <div class="my-card">
@@ -32,11 +32,12 @@
         </div>
       <% end %>
     <% end  %>
-  </div>
-</div>
 
-<div id="map"
-     style="width: 100%; height: 300px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+      <div id="map"
+      style="width: 100%; height: 90vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+  </div>
 </div>
