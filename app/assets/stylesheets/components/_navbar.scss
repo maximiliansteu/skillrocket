@@ -18,6 +18,13 @@
   }
 }
 
+.navbar .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .nav-link:hover {
   color: blue !important;
 }
@@ -36,12 +43,9 @@
   justify-content: baseline;
 
 }
-.navbar .search::placeholder {
-    color: red;
-  }
 
 .navbar .button {
   max-height: 38px;
   border-radius: 0 8px 8px 0;
-  padding: 10px 5px;
+  padding: 10px;
 }
