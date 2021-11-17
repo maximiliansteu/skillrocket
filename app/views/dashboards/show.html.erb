@@ -3,20 +3,15 @@
   <div class="max-bookings">
     <strong><p>My Bookings</p></strong>
     <% @bookings.each do |booking| %>
-      <div class="max-booking-card" style="display: flex;
-                                            width: 900px;
-                                            height: 150px;
-                                            background-color: white;
-                                            justify-content: space-between;
-                                            align-items: center;">
-          <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img" %>
-          <div class="max-booking-info">
-            <strong><p><%= booking.course.name %></p></strong>
-            <p>💰<%= booking.total_price %> €</p>
-            <p><%= booking.start_date %></p>
-            <p><%= booking.end_date %></p>
-            <p><%= booking.status %></p>
-          </div>
+      <div class="booking-testing">
+        <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img" %>
+        <div class="max-booking-info">
+          <strong><p><%= booking.course.name %></p></strong>
+          <p>💰<%= booking.total_price %> €</p>
+          <p><%= booking.start_date %></p>
+          <p><%= booking.end_date %></p>
+          <p><%= booking.status %></p>
+        </div>
       </div>
     <% end  %>
   </div>
@@ -24,12 +19,7 @@
   <div class="my-received-bookings">
     <strong><p>My Classes</p></strong>
     <% @received_bookings.each do |booking| %>
-      <div class="max-booking-card" style="display: flex;
-                                          width: 900px;
-                                          height: 150px;
-                                          background-color: white;
-                                          justify-content: space-between;
-                                          align-items: center;">
+      <div class="booking-testing" >
         <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img"%>
         <div class="max-booking-info">
           <strong><p><%= booking.course.name %></p></strong>
