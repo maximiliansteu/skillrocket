@@ -29,6 +29,9 @@
 }
 .javi-social-logo {
   max-width: 20px;
+  &:hover {
+    filter: brightness(2) invert(1);
+  }
 }
 
 .card-teacher-infos {
