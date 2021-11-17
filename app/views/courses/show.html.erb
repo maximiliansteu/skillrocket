@@ -75,7 +75,7 @@
         <p style="font-size: 1.2em"><%= @course.price %> € / day </p>
         <p style="font-size: 1.2em"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0</p>
       </div>
-      <div class="date-picker-container mt-2">
+      <%# <div class="date-picker-container mt-2">
         <div class='date-picker'>
           <a href="#" >Start date:</a>
           <p>17/11/2021</p>
@@ -84,12 +84,18 @@
           <a href="#" >End date:</a>
           <p>21/11/2021</p>
         </div>
-      </div>
+      </div> %>
+
+      <%= simple_form_for [@course, @booking=Booking.new] do |f| %>
+        <%= f.input :start_date, label: false%>
+        <%= f.input :end_date, label: false%>
         <div class='price-calculator-container d-flex justify-content-around mt-2'>
           <p>💰 <%= @course.price %> * 4 days</p>
-          <p><strong>XXX €</strong></p>
+          <p><strong>80 €</strong></p>
         </div>
-      <%= link_to 'Join course now', "#", class: " button" %>
+        <%= f.submit "Book Now", class: "button" %>
+      <%# <%= link_to 'Join course now', "#", class: " button" %>
+      <% end %>
     </div>
 
   </div>
