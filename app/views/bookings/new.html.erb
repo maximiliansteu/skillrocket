@@ -1,2 +1,13 @@
-<h1>Test</h1>
-<h2>Test 2 </h2>
+<div class="container-new">
+  <div class="column">
+    <h1>Book now</h1>
+
+    <div class="container-form">
+      <%= simple_form_for [@course, @booking] do |f| %>
+        <%= f.input :start_date, label: false%>
+        <%= f.input :end_date, label: false%>
+        <%= f.submit "Book Now", class: "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
