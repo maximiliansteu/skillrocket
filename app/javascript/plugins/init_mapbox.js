@@ -1,5 +1,5 @@
 import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import 'mapbox-gl/dist/mapbox-gl.css';
 
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
@@ -12,6 +12,7 @@ const initMapbox = () => {
     });
   }
 };
+
 
 if (mapElement) {
   // [ ... ]
