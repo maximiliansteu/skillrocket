@@ -1,35 +1,108 @@
 
 <div class="relative">
-  <div class="show-hero-image" style="background-image: <%= @course.photo %>">
-      <span>/ <%= link_to  @course.category, "#", class: "category-link" %></span>
-      <div class="show-hero-text">
-        <h1><%= @course.name %></h1>
-      </div>
-    </div>
-
-    <div class="overview">
-      <div class="container">
-          <h1><a href="#" class="tab-button">Overview</a></h1>
-          <%= @course.content %>
-      </div>
-    </div>
-    <%# <div class="overview"> %>
-      <%# <nav class="nav">
-        <a class="nav-link active" aria-current="page" href="#">Overview</a>
-        <a class="nav-link" href="#">Price</a>
-        <a class="nav-link" href="#">Location</a> %>
-        <%# <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> %>
-      <%# </nav> %>
-    <%# </div> %>
-
-    <div class="date-picker-container">
-      <h1>When would you like to start?</h1>
-      <p>Start straight away and learn at your own pace. If the course hasn’t started yet you’ll see the future date listed below.</p>
-
-
-    </div>
-
-    <div class="info-button">
+  <div class="show-hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<%= cl_image_path @course.photo.key %>');">
+    <span><%= link_to  @course.category, "#", class: "category-link" %></span>
+    <div class="show-hero-text">
+      <h1><%= @course.name %></h1>
+      <p><%= @course.description %></p>
       <%= link_to 'Join course now', "#", class: " button" %>
     </div>
+  </div>
+  <div class="wrapper">
+    <div class="overview main">
+      <div class="overview-container">
+        <h2>Overview</h2>
+        <p><%= @course.content %></p>
+      </div>
+      <div class="reviews">
+        <h2>Reviews</h2>
+        <div class="review">
+          <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar-large" />
+          <div class="review-content">
+            <div>
+              <p><small>14th January</small></p>
+              <p class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i> 2.0</p>
+            </div>
+            <div>
+              <p>Je suis Seb, le Tout-Puissant, <strong>ton dieu</strong>. Je suis omniprésent. Agenouille-toi devant moi.</p>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <img src='https://avatars.githubusercontent.com/u/90754426?v=4' class="avatar-large" />
+          <div class="review-content">
+            <div>
+              <p><small>28th February</small></p>
+              <p class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 3.0</p>
+            </div>
+              <p>The course is <strong>amazing</strong> but they really need to buy new chairs.</p>
+            <div>
+            </div>
+          </div>
+        </div>
+          <div class="review">
+          <img src='https://avatars.githubusercontent.com/u/90432547?v=4' class="avatar-large" />
+          <div class="review-content">
+            <div>
+              <p><small>3rd March</small></p>
+              <p class="review-rating"><i class="fas fa-star"></i> 1.0</p>
+            </div>
+              <p>Not enough dogs.</p>
+            <div>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="review-content">
+            <div>
+              <p><small>1st April</small></p>
+              <p class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 3.0</p>
+            </div>
+              <p>Hey, I'm the <strong>other guy</strong>, aka Not-Seb. I enjoy dipping sandwiches in my soup.</p>
+            <div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <h4 class="mt-4">When would you like to start?</h4>
+      <p>Start straight away and learn at your own pace.</p>
+      <div class="d-flex justify-content-between ml-1 mr-1 mt-3" >
+        <p style="font-size: 1.2em"><%= @course.price %> € / day </p>
+        <p style="font-size: 1.2em"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 3.0</p>
+      </div>
+      <div class="date-picker-container mt-2">
+        <div class='date-picker'>
+          <a href="#" >Start date:</a>
+          <p>17/11/2021</p>
+        </div>
+        <div class='date-picker'>
+          <a href="#" >End date:</a>
+          <p>21/11/2021</p>
+        </div>
+      </div>
+        <div class='price-calculator-container d-flex justify-content-around mt-2'>
+          <p><%= @course.price %> * 4 days</p>
+          <p><strong>XXX €</strong></p>
+        </div>
+      <%= link_to 'Join course now', "#", class: " button" %>
+    </div>
+
+  </div>
+  <div class="show-courses-map">
+    <h2 class="show-course-section-title">Location</h2>
+    <p><%= @course.location %></p>
+    <div>
+      <img src="https://static1.abc.es/media/tecnologia/2020/07/31/google-maps-kbaE--1200x630@abc.jpg" alt="">
+    </div>
+  </div>
 </div>
+
+<style>
+
+
+</style>
