@@ -33,9 +33,25 @@
   width: 66vw;
   min-height: 80vh;
 }
-.fas.fa-star {
+.fas.fa-star:first-child {
+  color: #50003C;
+}
+.fas.fa-star:nth-child(2) {
+  color: #C00090;
+}
+.fas.fa-star:nth-child(3) {
   color: $purple;
 }
+.fas.fa-star:nth-child(4) {
+  color: #FF0AC2;
+}
+.fas.fa-star:nth-child(5) {
+  color: #FF85E0;
+}
+
+
+
+
 
 .date-picker-container {
   display: flex;

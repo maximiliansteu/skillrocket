@@ -47,7 +47,7 @@ teacher_one.photo.attach(io: file, filename: 'teacher_one.png', content_type: 'i
 
 teacher_two = User.create!(email: "teacher2@fount.io",
                            password: "teacher123",
-                           first_name: "Tim",
+                           first_name: "Terry",
                            last_name: "Teacher",
                             biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                             Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
@@ -81,7 +81,7 @@ course_one = Course.create(name: "Rock Climbing 101",
                            description: "This is about how you learn to rockclimb",
                            price: 20,
                            category: "Sports",
-                           location: "Carrer de Joaquim Ruyra, 08025, Barcelona, Spain",
+                           location: "C/ Joaquim Ruyra, 08025, Barcelona",
                            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                            Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                            user: teacher_one)
@@ -93,7 +93,7 @@ course_two = Course.create!(name: "Learn CSS",
                             description: "CSS helps you for all kind of styling",
                             price: 30,
                             category: "Coding",
-                            location: "Carrer de Joaquim Ruyra, 08025, Barcelona, Spain",
+                            location: "Carrer de Joaquim Ruyra, 08025, Bcn",
                             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                             Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                             user: teacher_one)
@@ -105,7 +105,7 @@ course_three = Course.create!(name: "Become a better writer",
                               description: "Writing is a superpower that we all benefit from",
                               price: 25,
                               category: "Writing",
-                              location: "Plaça Catalana, 08032, Barcelona, Spain",
+                              location: "Plaça Catalana, 08032, Bcn",
                               content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                               Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                               user: teacher_two)
@@ -117,10 +117,10 @@ course_four = Course.create!(name: "Integrated Mindfulness",
                              description: "Mindfulness helps you to become the best version of yourself",
                              price: 28,
                              category: "Mental Health",
-                             location: "Plaça Catalana, 08032 Barcelona",
+                             location: "Plaça Catalana, 08032 Bcn",
                              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
-                             user: teacher_two)
+                             user: teacher_three)
 
 file = URI.open('https://source.unsplash.com/S297j2CsdlM')
 course_four.photo.attach(io: file, filename: 'mindful.png', content_type: 'image/png')
@@ -129,13 +129,25 @@ course_five = Course.create!(name: "Start you own company",
                              description: "How to actually create a new company. Not as hard as you think.",
                              price: 25,
                              category: "Business",
-                             location: "Baixada del Monestir, 9, 08034 Barcelona",
+                             location: "Baixada del Monestir, 9, 08034 Bcn",
                              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                              user: teacher_three)
 
 file = URI.open('https://source.unsplash.com/Y_LgXwQEx2c')
 course_five.photo.attach(io: file, filename: 'company.png', content_type: 'image/png')
+
+course_five = Course.create!(name: "Become a hermit",
+                             description: "Gardening is an amazing experience. You should try.",
+                             price: 45,
+                             category: "Gardening",
+                             location: "Baixada del Monestir, 12, 08034 Bcn",
+                             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
+                             Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
+                             user: teacher_two)
+
+file = URI.open('https://source.unsplash.com/qWRFE0ctlJk')
+course_five.photo.attach(io: file, filename: 'gardening.png', content_type: 'image/png')
 
 puts "#{Course.all.count} courses were created"
 
