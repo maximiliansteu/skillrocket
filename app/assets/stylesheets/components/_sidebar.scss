@@ -1,0 +1,54 @@
+.sidebar {
+  position: sticky;
+  right: 0;
+  top: 30px;
+  box-shadow: 0px 2px 6px 3px rgba(160,160,160,0.75);
+  margin: 30px 10px;
+  border-radius: 5px;
+  padding: 18px;
+  width: 30vw;
+  height: 50vh;
+  margin-right: 29px;
+  background-color: $white;
+
+  .button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, 0);
+    padding: 20px inherit;
+    font-size: 1em;
+    padding: 15px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+}
+
+.main {
+  width: 66vw;
+  min-height: 80vh;
+}
+.fas.fa-star {
+  color: $purple;
+}
+
+.date-picker-container {
+  display: flex;
+  justify-content: space-evenly;
+  .date-picker {
+    width: 100%;
+    text-align: center;
+    border: 1px solid gray;
+  }
+  .date-picker:first-child {
+    border-radius: 12px 0 0 12px;
+  }
+  .date-picker:last-child {
+    border-radius: 0 12px 12px 0px;
+  }
+}
