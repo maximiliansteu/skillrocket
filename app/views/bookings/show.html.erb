@@ -1,0 +1,26 @@
+<h1>Gratulations on learning a new skill!</h1>
+
+<h2>Below is your booking info</h2>
+
+  <div class="booking-testing">
+    <%= cl_image_tag @booking.course.photo.key, class: "max-booking-class-img" %>
+    <div class="max-booking-info">
+      <strong><p><%= @booking.course.name %></p></strong>
+      <p>💰<%= @booking.total_price %> €</p>
+      <p><%= @booking.start_date %></p>
+      <p><%= @booking.end_date %></p>
+      <p><%= @booking.status %></p>
+      <% if @course.user == current_user %>
+        <i class="fas fa-check maxi-icon"></i>
+        <i class="fas fa-ban maxi-icon"></i>
+      <% else %>
+        <i class="fas fa-check maxi-icon"></i>
+      <% end %>
+    </div>
+  </div>
+
+
+
+<p>You'll be notified when the teacher has accepted your offer</p>
+
+<p style="width: 200px; color: white" class="button"> <%= link_to 'See all your bookings', dashboard_path  %> </p>

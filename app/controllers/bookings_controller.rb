@@ -1,4 +1,11 @@
 class BookingsController < ApplicationController
+
+  before_action :set_booking, only: :show
+
+
+  def show
+  end
+
   def new
     @course = Course.find(params[:course_id])
     @booking = Booking.new
@@ -11,13 +18,18 @@ class BookingsController < ApplicationController
 
     @booking.course = @course
     if @booking.save!
-      redirect_to dashboard_path
+      redirect_to course_booking_path(@booking, @course)
+      # redirect_to dashboard_path
     else
       render :new
     end
   end
 
   private
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :course_id)
