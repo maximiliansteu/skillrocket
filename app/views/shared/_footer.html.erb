@@ -1,13 +1,25 @@
 <div class="footer">
-  <ul>
-    <li>About Skillrocket</li>
-    <li>Sign Up</li>
-    <li>FAQ</li>
-    <li>Contact Skillrocket</li>
-  </ul>
-  <div id="footer-logo">
-    <%= link_to root_path, class: "navbar-brand" do%>
-      <%= image_tag 'rocket_logo.png', style: "width: 70px"%>
-    <% end %>
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <ul>
+        <%= link_to '#' do%>
+          <li>About Skillrocket</li>
+        <% end %>
+        <%= link_to '#' do%>
+          <li>Sign Up</li>
+        <% end %>
+        <%= link_to '#' do%>
+          <li>FAQ</li>
+        <% end %>
+        <%= link_to '#' do%>
+          <li>Contact Skillrocket</li>
+        <% end %>
+      </ul>
+      <div id="footer-logo">
+        <%= link_to root_path, class: "navbar-brand" do%>
+          <%= image_tag 'rocket_logo.png', style: "width: 70px"%>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
