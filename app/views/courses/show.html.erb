@@ -15,24 +15,34 @@
       </div>
       <div class="reviews">
         <h2>Reviews</h2>
-        <div class="review">
-          <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar-large" />
-          <div class="review-content">
+        <% @reviews.each do |review| %>
+          <div class="review">
+            <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="review-content">
+              <div>
+                <p><small>14th January</small></p>
+                <p class="review-rating">
+                  <% rating = review.rating.to_i %>
+                  <% rating.times do %>
+                    <i class="fas fa-star"></i>
+                  <% end %>
+                  <%= review.rating %></p>
+             </div>
+              <p><%= review.content %></p>
             <div>
-              <p><small>14th January</small></p>
-              <p class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i> 2.0</p>
-            </div>
-            <div>
-              <p>Je suis Seb, le Tout-Puissant, <strong>ton dieu</strong>. Je suis omniprésent. Agenouille-toi devant moi.</p>
             </div>
           </div>
         </div>
+        <% end %>
+
+
         <div class="review">
           <img src='https://avatars.githubusercontent.com/u/90754426?v=4' class="avatar-large" />
           <div class="review-content">
             <div>
               <p><small>28th February</small></p>
-              <p class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 3.0</p>
+              <p class="review-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 3.0</p>
             </div>
               <p>The course is <strong>amazing</strong> but they really need to buy new chairs.</p>
             <div>

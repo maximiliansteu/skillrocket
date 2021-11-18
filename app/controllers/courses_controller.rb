@@ -1,12 +1,18 @@
 class CoursesController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_course, only: :show
 
   def show
+    @bookings = Booking.all
+    @reviews = Review.all
   end
 
   def index
-    @courses = Course.all
+    if params[:query].present?
+      @courses = Course.global_search(params[:query])
+    else
+      @courses = Course.all
+    end
 
     @markers = @courses.geocoded.map do |course|
       {
