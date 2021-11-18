@@ -12,14 +12,19 @@
       <li class="nav-item active">
         <%= link_to "Categories", courses_path, class: "nav-link" %>
       </li>
+      <% unless params[:action] == "home" %>
        <li class="nav-item active">
-        <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-        <%= f.input :search, input_html: {value: "Search courses"}, label: false %>
-        <%= f.submit "Search", class: "button" %>
+        <%= form_tag courses_path, method: :get, class:"maxi-search-bar-nav" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a course"
+          %>
+          <%= submit_tag "Search", class: "button" %>
+        <% end %>
       </li>
+    <% end %>
     </ul>
-
-      <% end %>
   </div>
 
 

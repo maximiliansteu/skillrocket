@@ -1,8 +1,18 @@
 
 <div class="hero-image">
   <div class="hero-text">
-    <h1>Learn a New Skill</h1>
-    <%= link_to 'View all courses', courses_path, class: "button" %>
+    <h1>Welcome to a world of peer-based learning</h1>
+
+    <h3>Go and find your next course now</h3>
+
+    <%= form_tag courses_path, method: :get, class:"maxi-search-bar-home" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "maxi-form-control-home",
+        placeholder: "   Find a course"
+      %>
+      <%= submit_tag "Search", class: "button" %>
+    <% end %>
 
   </div>
 </div>
@@ -10,7 +20,7 @@
 
 <div class="container">
 
-  <h1>Featured Courses</h1>
+  <h1 id="maxi-sub-banner-header">Featured Courses</h1>
 
 <div class="my-card-wrapper">
     <% @courses.each do |course| %>
