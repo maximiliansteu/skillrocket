@@ -8,3 +8,5 @@ class PagesController < ApplicationController
     @categories = Course::CATEGORIES
   end
 end
+
+# empty
