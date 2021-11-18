@@ -10,7 +10,12 @@
         <%= f.input :content, as: :text, :input_html => { :cols => 5, :rows => 5 }, label: false %>
         <%= f.input :location, label: false%>
         <%= f.input :price, label: false %>
-        <%= f.input :photo, as: :file %>
+        <label class="button-photo">
+        <p>Add Photo</p>
+        <span style="display:none;">
+        <%= f.input :photo, as: :file%>
+        </span>
+        </label>
         <%= f.submit "ADD COURSE", class: "button" %>
       <% end %>
     </div>

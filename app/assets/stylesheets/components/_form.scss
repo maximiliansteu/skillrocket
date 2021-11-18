@@ -22,6 +22,7 @@ h1 {
   border: 1px solid rgba(158, 158, 158, 0.3);
   box-shadow: 1px 1px 1px rgb(199, 199, 199);
   margin-bottom: 100px;
+  border-radius: 8px;
 }
 
 .form-image {
@@ -56,6 +57,62 @@ h1 {
 
 abbr[title="required"] {
   display: none;
+}
+
+.button-photo {
+  margin-left: 15px!important;
+  margin-top: 15px!important;
+  margin-bottom: 0px!important;
+  width: 100px;
+  height: 37px;
+  border: none;
+  transition: background-color .4s linear;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+  font-family: inherit;
+  padding: 10px;
+  color: #fff;
+  background-color: $purple;
+  border-radius: 3px;
+  &:hover {
+    color: #fff;
+    background-color: $blue;
+    text-decoration: none;
+  }
+}
+
+#calculate-price {
+    margin-left: 15px!important;
+  margin-top: 15px!important;
+  margin-bottom: 0px!important;
+  width: 100px;
+  height: 37px;
+  border: none;
+  transition: background-color .4s linear;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+  font-family: inherit;
+  padding: 10px;
+  color: #fff;
+  background-color: $purple;
+  border-radius: 3px;
+  &:hover {
+    color: #fff;
+    background-color: $blue;
+    text-decoration: none;
+  }
+}
+
+
+
+#calulate-container {
+
+}
+
+#book-now {
+  margin-top: 100px!important;
 }
 
 //   .ofo-button {
