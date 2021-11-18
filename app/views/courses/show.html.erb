@@ -111,16 +111,20 @@
               <p><%= @course.user.biography %></p>
               <div class="javi-teacher-additional-info">
                 <%= link_to @course.user.linked_in_handle do %>
-                  <%= image_tag 'linkedin.png', class: "javi-social-logo" %>
+                  <i class="fab fa-linkedin javi-social-logo"title="Teacher's Linkedin profile"></i>
+                  <%# <%= image_tag 'linkedin.png', class: "javi-social-logo" %>
                 <% end %>
                 <%= link_to @course.user.instagram_handle do %>
-                  <%= image_tag 'instagram.png', class: "javi-social-logo" %>
+                  <i class="fab fa-instagram javi-social-logo" title="Teacher's Instagram page"></i>
+                  <%# <%= image_tag 'instagram.png', class: "javi-social-logo" %>
                 <% end %>
                 <%= link_to @course.user.homepage_url do %>
-                  <%= image_tag 'www.png', class: "javi-social-logo" %>
+                  <i class="fas fa-graduation-cap javi-social-logo" title="Teacher's home page"></i>
+                  <%# <%= image_tag 'www.png', class: "javi-social-logo" %>
                 <% end %>
                 <%= link_to "mailto:#{@course.user.email}" do %>
-                  <%= image_tag 'email.png', class: "javi-social-logo" %>
+                  <i class="fas fa-at javi-social-logo" title="Contact this teacher"></i>
+                  <%# <%= image_tag 'email.png', class: "javi-social-logo" %>
                 <% end %>
               </div>
             </div>
