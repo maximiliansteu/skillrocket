@@ -4,12 +4,35 @@
 }
 
 
-
 body {
   background-color: rgb(215, 215, 215);
   background: linear-gradient(90deg, rgb(234, 233, 233) 0%, rgb(255, 247, 247) 10%, rgb(238, 238, 238) 100%);
 }
 
-h1 {
-  color: white
+#maxi-sub-banner-header {
+  color: #E04AA5;
+  margin-bottom: 20px;
+}
+
+.maxi-search-bar-home {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  .button {
+    border-radius: 0px 10px 10px 0px;
+  }
+  justify-content: center;
+}
+
+.maxi-form-control-home {
+  border-radius: 10px 0px 0px 10px;
+  border: 0px;
+}
+
+.hero-text {
+  h3 {
+    color: white;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
 }
