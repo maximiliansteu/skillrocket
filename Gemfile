@@ -62,7 +62,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-# Manually added gems
+# -----------------------
+# MANUALLY ADDED GEMS
 
 gem 'devise'
 
@@ -76,3 +77,6 @@ gem 'cloudinary', '~> 1.16.0'
 
 #geocoder gemfile
 gem 'geocoder'
+
+#global search
+gem 'pg_search', '~> 2.3.0'

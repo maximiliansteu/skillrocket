@@ -4,6 +4,39 @@
       <%= image_tag 'skillrocket-logo.png' %>
     <% end %>
 
+  <div class="collapse navbar-collapse" id="container-nav-category">
+    <ul class="navbar-nav mr-auto" >
+      <li class="nav-item active">
+        <%= link_to "All Courses", courses_path, class: "nav-link"%>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Categories", courses_path, class: "nav-link" %>
+      </li>
+      <% unless params[:action] == "home" %>
+       <li class="nav-item active">
+        <%= form_tag courses_path, method: :get, class:"maxi-search-bar-nav" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a course"
+          %>
+          <%= submit_tag "Search", class: "button" %>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+            <%= link_to "Become a teacher!", new_course_path, class: "nav-link button", title: "Create yout own course" %>
+        </li>
     <div class="collapse navbar-collapse" id="container-nav-category">
       <ul class="navbar-nav mr-auto" >
         <li class="nav-item">
@@ -24,8 +57,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
           <li class="nav-item">
@@ -46,7 +78,8 @@
             <%= link_to "Login", new_user_session_path, class: "nav-link", title: "Login" %>
           </li>
         <% end %>
-      </ul>
+      </ul>-->
+
     </div>
   </div>
 </div>
