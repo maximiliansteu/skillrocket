@@ -3,5 +3,7 @@ class PagesController < ApplicationController
     @courses = Course.all
   end
 
-
+  def categories
+    @categories = Course::CATEGORIES
+  end
 end

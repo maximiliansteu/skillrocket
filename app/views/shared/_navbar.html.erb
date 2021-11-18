@@ -10,7 +10,7 @@
           <%= link_to "All Courses", courses_path, class: "nav-link", title: "See all courses" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Categories", courses_path, class: "nav-link", title: "See all categories" %>
+          <%= link_to "Categories", categories_path, class: "nav-link", title: "See all categories" %>
         </li>
         <li class="nav-item">
           <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>

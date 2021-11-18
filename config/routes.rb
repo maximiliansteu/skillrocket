@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
   resource :dashboard, only: [:show]
   resources :reviews, only: :destroy
+  get 'categories', to: 'pages#categories'
 end
