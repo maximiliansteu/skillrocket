@@ -50,13 +50,20 @@
   padding: 10px;
 }
 
-.navbar .button {
-  color: white !important;
-  padding: 10px 20px !important;
+.maxi-search-bar-nav {
+  display: flex;
 }
-.navbar .button:not(.form-inline .button) {
-  font-size: 0.9em;
-  padding: 10px 15px !important;
+
+#container-nav-category {
+  flex-grow: 1;
+  .navbar .button {
+    color: white !important;
+    padding: 10px 20px !important;
+  }
+  .navbar .button:not(.form-inline .button) {
+    font-size: 0.9em;
+    padding: 10px 15px !important;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -66,3 +73,4 @@
     }
   }
 }
+
