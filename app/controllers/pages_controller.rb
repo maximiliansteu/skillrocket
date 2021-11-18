@@ -4,3 +4,5 @@ class PagesController < ApplicationController
     @courses = Course.all
   end
 end
+
+# empty
