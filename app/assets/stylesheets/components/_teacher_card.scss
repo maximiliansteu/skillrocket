@@ -20,19 +20,24 @@
 }
 .javi-teacher-additional-info {
   float: right;
+  min-width: 120px;
   a {
     text-decoration: none;
     &:hover {
     text-decoration: none;
     }
   }
-}
-.javi-social-logo {
-  max-width: 20px;
+  .javi-social-logo {
+    transition: color .4s linear;
+    font-size: 1.1em;
+    padding: 2%;
+    color: $purple;
   &:hover {
-    filter: brightness(2) invert(1);
+    color: $blue;
   }
 }
+}
+
 
 .card-teacher-infos {
   padding: 20px;
