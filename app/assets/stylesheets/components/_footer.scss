@@ -2,14 +2,25 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #21046a;
+  background-color: rgb(86, 86, 86);
   color: white;
   padding: 30px;
 }
 
 .footer li {
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none !important;
+  }
   margin-top: 10px;
   list-style-type: none;
+  color: white;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 
 li:first-child {

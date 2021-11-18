@@ -129,7 +129,7 @@ course_five = Course.create!(name: "Start you own company",
                              description: "How to actually create a new company. Not as hard as you think.",
                              price: 25,
                              category: "Business",
-                             location: "Baixada del Monestir, 9, 08034 Bcn",
+                             location: "Baixada del Monestir, 9, 08034, Bcn",
                              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                              user: teacher_three)
@@ -141,7 +141,7 @@ course_five = Course.create!(name: "Become a hermit",
                              description: "Gardening is an amazing experience. You should try.",
                              price: 45,
                              category: "Gardening",
-                             location: "Baixada del Monestir, 12, 08034 Bcn",
+                             location: "C/ Tallers, 1, 08001, Bcn",
                              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                              Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur.",
                              user: teacher_two)
