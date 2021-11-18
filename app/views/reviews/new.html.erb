@@ -1,0 +1,13 @@
+<div class="container-new">
+  <div class="column">
+    <h1>Give us some feedback!</h1>
+
+    <div class="container-form">
+      <%= simple_form_for [@course, @booking, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.input :rating %>
+        <%= f.submit "Submit feedback", class: "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,9 @@
 class CoursesController < ApplicationController
-
   before_action :set_course, only: :show
 
   def show
+    @bookings = Booking.all
+    @reviews = Review.all
   end
 
   def index

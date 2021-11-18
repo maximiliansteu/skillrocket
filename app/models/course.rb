@@ -2,6 +2,7 @@ class Course < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
   has_many :bookings
+  has_many :reviews, through: :bookings
 
   CATEGORIES = ["Sports", "Coding", "Writing", "Mental Health", "Business", "Gardening", "Fitness", "Crypto", "Design", "Fashion"]
   validates :name, presence: true
