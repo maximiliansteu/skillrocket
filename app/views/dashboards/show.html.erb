@@ -1,6 +1,6 @@
 <div class="max-booking-container">
   <div class="max-bookings">
-  <h3 id="max-booking-header">My Bookings</h3>
+  <h3 id="max-booking-header">The courses you've booked</h3>
     <% @bookings.each do |booking| %>
       <div class="booking-testing">
         <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img" %>
@@ -10,15 +10,13 @@
           <p><%= booking.start_date %></p>
           <p><%= booking.end_date %></p>
           <p><%= booking.status %></p>
-          <i class="fas fa-check maxi-icon"></i>
-          <i class="fas fa-ban maxi-icon"></i>
         </div>
       </div>
     <% end  %>
   </div>
 
   <div class="my-received-bookings">
-    <h3 id="max-booking-header">My Offers</h3>
+    <h3 id="max-booking-header">Bookings for classes you teach</h3>
     <% @received_bookings.each do |booking| %>
       <div class="booking-testing" >
         <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img"%>
@@ -28,8 +26,12 @@
           <p><%= booking.start_date %></p>
           <p><%= booking.end_date %></p>
           <p><%= booking.status %></p>
+          <%= link_to booking_path(booking, {status: "confirmed"}), method: :patch do %>
           <i class="fas fa-check maxi-icon"></i>
+          <% end %>
+          <%= link_to booking_path(booking, {status: "canceled"}), method: :patch do %>
           <i class="fas fa-ban maxi-icon"></i>
+          <% end %>
         </div>
       </div>
     <% end  %>
