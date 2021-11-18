@@ -7,7 +7,7 @@ class Course < ApplicationRecord
   CATEGORIES = ["Sports",
                 "Coding",
                 "Writing",
-                "Mental Health",
+                "Health",
                 "Business",
                 "Gardening",
                 "Fitness",
@@ -28,7 +28,7 @@ class Course < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
-    against: [ :name, :description ],
+    against: [ :name, :description, :category ],
     associated_against: {
       user: [ :first_name, :last_name ]
     },

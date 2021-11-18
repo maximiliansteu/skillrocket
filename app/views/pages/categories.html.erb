@@ -13,7 +13,8 @@
   <div class="container">
     <div class="cards" style="margin-bottom: 100px;">
       <% @categories.each do |category| %>
-        <%= link_to "#" do %>
+
+        <%= link_to "courses?query=#{category.gsub(/\s+/, "").downcase}&commit=Search" do %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?<%= category.gsub(/\s+/, "") %>);">
             <p>
               <%= category %>
