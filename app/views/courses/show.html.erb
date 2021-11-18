@@ -93,7 +93,11 @@
           <p>💰 <%= @course.price %> * 4 days</p>
           <p><strong>80 €</strong></p>
         </div>
-        <%= f.submit "Book Now", class: "button" %>
+        <%if @course.user == current_user%>
+          <%= f.submit "Cannot book your own course", style: "background-color: grey;", class: "button", disabled: true %>
+        <%else %>
+          <%= f.submit "Book Now", class: "button" %>
+        <%end %>
       <%# <%= link_to 'Join course now', "#", class: " button" %>
       <% end %>
     </div>

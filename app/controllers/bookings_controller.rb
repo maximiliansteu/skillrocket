@@ -1,10 +1,9 @@
 class BookingsController < ApplicationController
 
-  before_action :set_booking, only: :show
+  before_action :set_booking, only: %i[show edit update]
 
 
   def show
-    raise
   end
 
   def new
@@ -19,10 +18,20 @@ class BookingsController < ApplicationController
 
     @booking.course = @course
     if @booking.save!
-      redirect_to course_booking_path(@booking, @course)
+      redirect_to booking_path(@booking)
       # redirect_to dashboard_path
     else
       render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    # @booking.status = "confirmed"
+    if @booking.update(status: params[:status])
+      redirect_to dashboard_path
     end
   end
 

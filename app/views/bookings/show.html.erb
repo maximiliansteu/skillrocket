@@ -2,7 +2,6 @@
 
 <h2>Below is your booking info</h2>
 
-<% if @booking.course.user != current_user %>
   <div class="booking-testing">
     <%= cl_image_tag @booking.course.photo.key, class: "max-booking-class-img" %>
     <div class="max-booking-info">
@@ -15,9 +14,6 @@
       <i class="fas fa-ban maxi-icon"></i>
     </div>
   </div>
-<% else %>
-  <p>You cannot book your own class</p>
-<% end %>
 
 <p>You'll be notified when the teacher has accepted your offer</p>
 
