@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
 
   def show
+    raise
   end
 
   def new

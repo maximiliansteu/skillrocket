@@ -3,7 +3,6 @@ class CoursesController < ApplicationController
   before_action :set_course, only: :show
 
   def show
-    raise
   end
 
   def index
