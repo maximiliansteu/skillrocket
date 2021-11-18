@@ -8,7 +8,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  padding-top: 10px;
+  width: 55px;
 }
 
 #container-nav-category li a{
@@ -44,8 +44,25 @@
 
 }
 
-.navbar .button {
+.navbar .form-inline .button {
   max-height: 38px;
   border-radius: 0 8px 8px 0;
   padding: 10px;
+}
+
+.navbar .button {
+  color: white !important;
+  padding: 10px 20px !important;
+}
+.navbar .button:not(.form-inline .button) {
+  font-size: 0.9em;
+  padding: 10px 15px !important;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    .container {
+      max-width: 1300px;
+    }
+  }
 }
