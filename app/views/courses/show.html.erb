@@ -82,7 +82,7 @@
       <h4 class="mt-4">When would you like to start?</h4>
       <p>Start straight away and learn at your own pace.</p>
       <div class="d-flex justify-content-between ml-1 mr-1 mt-3" >
-        <p style="font-size: 1.2em"><%= @course.price %> € / day </p>
+        <p style="font-size: 1.2em" id="course-price"><%= @course.price %>  </p><span>€ / day</span>
         <p style="font-size: 1.2em"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0</p>
       </div>
       <%# <div class="date-picker-container mt-2">
@@ -97,11 +97,15 @@
       </div> %>
 
       <%= simple_form_for [@course, @booking = Booking.new] do |f| %>
-        <%= f.input :start_date, label: false%>
-        <%= f.input :end_date, label: false%>
+
+        <%= f.input :start_date, as: :date, html5: true, label: false%>
+        <%= f.input :end_date, as: :date, html5: :true, label: false%>
+        <div id="calculate-container">
+        <%= link_to "Calculate Price","#", class: 'calculate-price price-button'%>
+        </div>
         <div class='price-calculator-container d-flex justify-content-around mt-2'>
-          <p>💰 <%= @course.price %> * 4 days</p>
-          <p><strong>80 €</strong></p>
+          <span class="total-days"></span>
+          <p><strong class="total-price"></strong> </p>
         </div>
         <%if @course.user == current_user%>
           <%= f.submit "Cannot book your own course", style: "background-color: grey;", class: "button", disabled: true %>
