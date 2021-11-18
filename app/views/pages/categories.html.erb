@@ -1,0 +1,27 @@
+<style>
+
+</style>
+<div class="hero-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+  <div class="hero-text">
+    <h1 style="margin: 0;">All categories</h1>
+    <h2 style="color: white; text-align: left;">Don't be shy, pick one!</h2>
+  </div>
+</div>
+
+
+<div class="javi-categories-container">
+  <div class="container">
+    <div class="cards" style="margin-bottom: 100px;">
+      <% @categories.each do |category| %>
+        <%= link_to "#" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?<%= category.gsub(/\s+/, "") %>);">
+            <p>
+              <%= category %>
+            </div>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+</div>
+
+</div>
