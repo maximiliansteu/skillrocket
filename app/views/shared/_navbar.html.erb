@@ -31,7 +31,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
@@ -43,7 +43,7 @@
           <%= link_to "All Courses", courses_path, class: "nav-link", title: "See all courses" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Categories", courses_path, class: "nav-link", title: "See all categories" %>
+          <%= link_to "Categories", categories_path, class: "nav-link", title: "See all categories" %>
         </li>
         <li class="nav-item">
           <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
@@ -56,6 +56,7 @@
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
+
     </button>
 <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -79,6 +80,7 @@
           </li>
         <% end %>
       </ul>-->
+      </button>-->
 
     </div>
   </div>

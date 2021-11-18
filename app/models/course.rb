@@ -4,7 +4,18 @@ class Course < ApplicationRecord
   has_many :bookings
   has_many :reviews, through: :bookings
 
-  CATEGORIES = ["Sports", "Coding", "Writing", "Mental Health", "Business", "Gardening", "Fitness", "Crypto", "Design", "Fashion"]
+  CATEGORIES = ["Sports",
+                "Coding",
+                "Writing",
+                "Mental Health",
+                "Business",
+                "Gardening",
+                "Fitness",
+                "Crypto",
+                "Design",
+                "Fashion",
+                "Languages",
+                "DIY"]
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
