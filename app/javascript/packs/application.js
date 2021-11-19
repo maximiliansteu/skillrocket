@@ -31,6 +31,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
 import { initFlatpickr } from "../plugins/flatpickr";
+import { previewImageOnFileSelect } from "../components/init_upload_photo";
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -39,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   initPriceCalculation();
   initFlatpickr();
+  previewImageOnFileSelect();
 })
 
 const statusColor = () => {

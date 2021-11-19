@@ -1,5 +1,18 @@
-
+<%# <div class="container">
+  <div class="row">
+  <div class="col-6">
+<div class="hero-image new-form-banner">
+</div>
+</div>
+<div class="col-6"> %>
+<div class="container">
+<div class="row">
+<div class="col-6">
+<%= image_tag 'illustration.svg', style: "width: 400px; height: 900px; margin-top: 50px;"%>
+</div>
+<div class="col-6">
 <div class="container-new">
+
   <div class="column">
     <h1>What's your <br>course about?</h1>
     <div class="container-form">
@@ -13,11 +26,15 @@
         <label class="button-photo">
         <p>Add Photo</p>
         <span style="display:none;">
-        <%= f.input :photo, as: :file%>
+        <%= f.input :photo, as: :file, input_html: { class: 'hidden', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
         </span>
         </label>
+        <%= image_tag "", width: 300, style: "border-radius:5px; margin-left:15px;", class: "hidden", id: "photo-preview" %>
         <%= f.submit "Add course", class: "button" %>
       <% end %>
     </div>
   </div>
+</div>
+</div>
+</div>
 </div>

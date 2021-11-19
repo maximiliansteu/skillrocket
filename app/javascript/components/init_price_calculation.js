@@ -2,7 +2,6 @@ const initPriceCalculation = () => {
 
 
 if (document.querySelector(".calculate-price")) {
-  console.log("test");
   const priceCalculation = document.querySelector(".calculate-price");
   priceCalculation.addEventListener("click", (event) => {
     event.preventDefault();
