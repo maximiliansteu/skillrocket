@@ -54,8 +54,10 @@
         </div>
         <p style="font-size: 1.2em">
 
-        <% if @reviews.count != 0 %>
-          <% total_rating = 0 %>
+        <% if @reviews.nil? %>
+          <p>No ratings yet</p>
+        <% else %>
+           <% total_rating = 0 %>
           <% @reviews.each do |review| %>
             <% total_rating += review.rating.to_f %>
           <% end %>
@@ -67,8 +69,6 @@
             <i class="far fa-star"></i>
           <% end %>
           <%= (total_rating / @reviews.count).round(1) %>
-        <% else %>
-          <p>No ratings yet</p>
         <% end %>
       </div>
 

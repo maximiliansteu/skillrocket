@@ -3,8 +3,8 @@ class CoursesController < ApplicationController
   before_action :set_course, only: :show
 
   def show
-    @reviews = @course.bookings.each do |booking|
-      Review.where(booking: booking)
+    @course.bookings.each do |booking|
+      @reviews = Review.where(booking: booking)
     end
   end
 
