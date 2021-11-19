@@ -122,3 +122,28 @@ abbr[title="required"] {
 //   display: block;
 //   margin: 0 auto;
 // }
+
+.price-calculator-container {
+  display: inline-block;
+  justify-content: space-around;
+  margin-left: 70px;
+
+}
+
+#button-calculate-container {
+  display: inline-block;
+}
+
+#calculate-container {
+  display: flex;
+
+  padding: 20px;
+  height: 60px;
+  width: 380px;
+  margin-left: 8px;
+}
+// background-color: #f1f1f1;
+// width: 380px;
+// height: 80px
+// margin-left: 4px
+// margin-bottom: 50px!important;

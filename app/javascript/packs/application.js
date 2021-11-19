@@ -44,8 +44,9 @@ priceCalculation.addEventListener("click", (event) => {
   const milliseconds = endTime - startTime;
   const days = (milliseconds/(60 * 60 * 24 * 1000));
   const result = days * coursePrice;
-  document.querySelector(".total-days").innerHTML = `${days}<span> Days</span >`;
-  document.querySelector(".total-price").innerHTML = `${result}<span> €</span >`;
+  document.querySelector(".total-price").style.marginLeft = "15px";
+  document.querySelector(".total-days").innerHTML = `${days}<span> Days for:</span >`;
+  document.querySelector(".total-price").innerHTML = `${result}<span>€</span >`;
 });
 
 
