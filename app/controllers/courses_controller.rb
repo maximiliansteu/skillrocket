@@ -3,8 +3,9 @@ class CoursesController < ApplicationController
   before_action :set_course, only: :show
 
   def show
-    @bookings = Booking.all
-    @reviews = Review.all
+    @reviews = @course.bookings.each do |booking|
+      Review.where(booking: booking)
+    end
   end
 
   def index
