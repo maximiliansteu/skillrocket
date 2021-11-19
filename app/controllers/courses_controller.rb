@@ -8,11 +8,16 @@ class CoursesController < ApplicationController
   end
 
   def index
-    if params[:query].present?
-      @courses = Course.global_search(params[:query])
+    if params[:location].present? && params[:query].present?
+      @courses = Course.near(params[:location], 20).global_search(params[:query])
+    elsif params[:query].present?
+      @courses = @courses.global_search(params[:query])
+    elsif params[:location].present?
+      @courses = Course.near(params[:location], 20)
     else
       @courses = Course.all
     end
+
     @markers = @courses.geocoded.map do |course|
       { lat: course.latitude, lng: course.longitude }
     end

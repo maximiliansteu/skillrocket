@@ -17,6 +17,11 @@ const initMapbox = () => {
         .addTo(map);
     });
     fitMapToMarkers(map, markers);
+
+    window.addEventListener('load', () => {
+      map.resize();
+      fitMapToMarkers(map, markers);
+    })
   }
 };
 

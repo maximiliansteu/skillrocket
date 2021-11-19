@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @review.booking = @booking
     if @review.save
-      redirect_to dashboard_path(current_user)
+      redirect_to course_path(@booking.course_id)
     else
       render 'bookings/show'
     end

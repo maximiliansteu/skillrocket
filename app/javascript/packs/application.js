@@ -27,6 +27,9 @@ import "bootstrap";
 import { initPriceCalculation } from "../components/init_price_calculation";
 
 import { initMapbox } from '../plugins/init_mapbox';
+
+import { initAutocomplete } from '../plugins/init_autocomplete';
+
 import { initFlatpickr } from "../plugins/flatpickr";
 import { previewImageOnFileSelect } from "../components/init_upload_photo";
 
@@ -34,6 +37,7 @@ import { previewImageOnFileSelect } from "../components/init_upload_photo";
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   statusColor();
+  initAutocomplete();
   initPriceCalculation();
   initFlatpickr();
   previewImageOnFileSelect();

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 95%;
-  margin: 25px;
+  margin: 40px;
 }
 
 .dashboard-right-half {
@@ -19,8 +19,22 @@
   margin-top: 25px;
   margin-bottom: 25px;
   border: 1px solid lightgray;
+  background-color: white;
   padding: 25px;
   border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    padding-bottom: 13px;
+  }
+}
+
+.dashboard-confirmed {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid lightgray;
+  padding: 25px;
+  border-radius: 7px;
+  background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h3 {
     padding-bottom: 13px;
@@ -33,6 +47,7 @@
   border: 1px solid lightgray;
   padding: 25px;
   border-radius: 7px;
+  background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h3 {
     padding-bottom: 13px;
@@ -45,9 +60,16 @@
   border: 1px solid lightgray;
   padding: 25px;
   border-radius: 7px;
+  background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h3 {
     padding-bottom: 13px;
+  }
+  .dashboard-card-info-split {
+    margin-top: 2px!important;
+  }
+  .button {
+    margin-top: 3px!important;
   }
 }
 
@@ -57,6 +79,7 @@
   border: 1px solid lightgray;
   padding: 25px;
   border-radius: 7px;
+  background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h3 {
     padding-bottom: 13px;
@@ -84,11 +107,11 @@
   height: 150px;
   width: 100%;
   margin-left: 20px;
-  margin-top: 30px;
+  margin-top: 0px;
   p {
     padding: 0px!important;
     margin: 0px!important;
-    font-size: 10px;
+    font-size: 15px;
   }
   h4 {
     padding: 0px!important;
@@ -98,12 +121,17 @@
   h2 {
     padding: 0px!important;
     margin: 0px!important;
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
 .dashboard-card-info-split {
-  margin-top: 24px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-review {
   display: flex;
   justify-content: space-between;
 }
