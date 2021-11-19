@@ -54,10 +54,11 @@
         </div>
         <p style="font-size: 1.2em">
 
-        <% total_rating = 0 %>
-        <% @reviews.each do |review| %>
-          <% total_rating += review.rating.to_f %>
-        <% end %>
+        <% if @reviews.count != 0 %>
+          <% total_rating = 0 %>
+          <% @reviews.each do |review| %>
+            <% total_rating += review.rating.to_f %>
+          <% end %>
           <% final_rating = total_rating / @reviews.count  %>
           <% final_rating.round.times do %>
             <i class="fas fa-star"></i>
@@ -66,6 +67,9 @@
             <i class="far fa-star"></i>
           <% end %>
           <%= (total_rating / @reviews.count).round(1) %>
+        <% else %>
+          <p>No ratings yet</p>
+        <% end %>
       </div>
 
       <%= simple_form_for [@course, @booking = Booking.new] do |f| %>
@@ -109,10 +113,10 @@
             <% rating = review.rating.to_i %>
             <% rating.times do %>
               <i class="fas fa-star"></i>
-              <% (5 - rating).times do %>
+            <% end %>
+            <% (5 - rating).times do %>
                <i class="far fa-star"></i>
               <% end %>
-            <% end %>
 
             <%= review.rating %></p>
             </div>
