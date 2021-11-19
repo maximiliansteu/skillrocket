@@ -65,7 +65,7 @@
           <% (5 - final_rating.to_i).times do %>
             <i class="far fa-star"></i>
           <% end %>
-          <%= total_rating / @reviews.count %>
+          <%= (total_rating / @reviews.count).round(1) %>
       </div>
 
       <%= simple_form_for [@course, @booking = Booking.new] do |f| %>

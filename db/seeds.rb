@@ -144,6 +144,7 @@ course_five.photo.attach(io: file, filename: 'gardening.png', content_type: 'ima
 puts "#{Course.all.count} courses were created"
 
 booking_one = Booking.create!(user: teacher_three, course: course_one, start_date: Date.today, end_date: Date.today + 5)
+booking_two = Booking.create!(user: teacher_three, course: course_one, start_date: Date.today, end_date: Date.today + 5)
 Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
 Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
 
