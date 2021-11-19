@@ -9,8 +9,8 @@ require 'open-uri'
 
 puts "clean data"
 
-Booking.destroy_all
 Course.destroy_all
+Booking.destroy_all
 User.destroy_all
 
 puts "insert data"

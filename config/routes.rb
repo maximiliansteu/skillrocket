@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   resource :dashboard, only: [:show]
   resources :bookings, only: %i[show update]
-  resources :reviews, only: :destroy
+  resources :reviews, only: [:destroy]
 
   get 'categories', to: 'pages#categories'
 end

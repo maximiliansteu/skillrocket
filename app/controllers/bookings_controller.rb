@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
 
   def show
+    @review = Review.new
   end
 
   def new
