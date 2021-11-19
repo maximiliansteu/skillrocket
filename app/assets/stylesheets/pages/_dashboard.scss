@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 95%;
-  margin: 25px;
+  margin: 40px;
 }
 
 .dashboard-right-half {
@@ -66,7 +66,10 @@
     padding-bottom: 13px;
   }
   .dashboard-card-info-split {
-    margin-top: 24px!important;
+    margin-top: 2px!important;
+  }
+  .button {
+    margin-top: 3px!important;
   }
 }
 
@@ -108,7 +111,7 @@
   p {
     padding: 0px!important;
     margin: 0px!important;
-    font-size: 12px;
+    font-size: 15px;
   }
   h4 {
     padding: 0px!important;
@@ -118,12 +121,17 @@
   h2 {
     padding: 0px!important;
     margin: 0px!important;
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
 .dashboard-card-info-split {
-  margin-top: 43px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-review {
   display: flex;
   justify-content: space-between;
 }
