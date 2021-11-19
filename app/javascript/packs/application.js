@@ -29,8 +29,19 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  statusColor();
 })
 
+const statusColor = () => {
+  const status = document.querySelectorAll(".status");
+  if (status.innerText == "Pending") {
+    status.style.color = 'orange'
+  } else if (status.innerText == "Canceled") {
+    status.style.color = 'red'
+  } else if (status.innerText == "Confirmed"){
+    status.style.color = 'green'
+  }
+}
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';

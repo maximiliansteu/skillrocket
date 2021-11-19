@@ -1,12 +1,12 @@
 
 <div class="container-new">
   <div class="column">
-    <h1>ADD NEW COURSE</h1>
+    <h1>What's your <br>course about?</h1>
     <div class="container-form">
       <%= simple_form_for [ @course ] do |f| %>
         <%= f.input :name, label: false%>
         <%= f.input :description, label: false%>
-        <%= f.input :category, collection: Course::CATEGORIES %>
+        <%= f.input :category, collection: Course::CATEGORIES, selected: 1 %>
         <%= f.input :content, as: :text, :input_html => { :cols => 5, :rows => 5 }, label: false %>
         <%= f.input :location, label: false%>
         <%= f.input :price, label: false %>
@@ -16,7 +16,7 @@
         <%= f.input :photo, as: :file%>
         </span>
         </label>
-        <%= f.submit "ADD COURSE", class: "button" %>
+        <%= f.submit "Add course", class: "button" %>
       <% end %>
     </div>
   </div>

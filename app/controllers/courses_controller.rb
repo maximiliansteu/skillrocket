@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_course, only: :show
 
   def show
@@ -13,12 +13,8 @@ class CoursesController < ApplicationController
     else
       @courses = Course.all
     end
-
     @markers = @courses.geocoded.map do |course|
-      {
-        lat: course.latitude,
-        lng: course.longitude
-      }
+      { lat: course.latitude, lng: course.longitude }
     end
   end
 

@@ -1,0 +1,61 @@
+.javi-animated-rocket {
+  max-width: 120px;
+  position: relative;
+  transform: translateX(0px) translateY(0px);
+  z-index: 0;
+}
+.javi-animated-rocket.javi-extra-top {
+  width: 55px;
+  top: -40vh;
+  left: 35vw;
+  animation: 5.5s ease-out 0s 1 fly;
+}
+.javi-animated-rocket.javi-top {
+  width: 80px;
+  top: -40vh;
+  left: 35vw;
+  animation: 4s ease-out 0s 1 fly;
+}
+
+.javi-animated-rocket.javi-middle {
+  width: 220px;
+  top: -38vh;
+  left: 39vw;
+  animation: 3.5s ease-out 0s 1 fly;
+}
+
+.javi-animated-rocket.javi-extra {
+  width: 45px;
+  top: -32vh;
+  left: 33vw;
+  animation: 6.2s ease-out 0s 1 fly;
+}
+
+.javi-animated-rocket.javi-bottom {
+  width: 100px;
+  top: -25vh;
+  left: 25vw;
+  animation: 4.5s ease-out 0s 1 fly;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(10deg);
+    transition: transform 1s ease-in;
+  }
+  100%{
+    transform: translateX(100vw) translateY(-90vh) rotate(70deg);
+    transition: transform 6s ease;
+  }
+}
+.booking-confirmation-container {
+  position: relative
+}
+
+// header {
+//   /* This section calls the slideInFromLeft animation we defined above */
+//   animation: 1s ease-out 0s 1 slideInFromLeft;
+
+//   background: #333;
+//   padding: 30px;
+// }
