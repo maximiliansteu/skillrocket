@@ -54,7 +54,7 @@
         </div>
         <p style="font-size: 1.2em">
 
-        <% if @reviews.nil? %>
+        <% if @reviews.nil? || @reviews.empty? %>
           <p>No ratings yet</p>
         <% else %>
            <% total_rating = 0 %>
@@ -100,7 +100,7 @@
 
 
   <div class="reviews">
-    <% if @reviews.nil? %>
+    <% if @reviews.nil? || @reviews.empty?  %>
       <h2 style="padding-left: 20px;">This course has no reviews yet</h2>
     <% else %>
       <h2 style="text-align: center;">Reviews</h2>

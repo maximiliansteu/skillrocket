@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
     if params[:location].present? && params[:query].present?
       @courses = Course.near(params[:location], 20).global_search(params[:query])
     elsif params[:query].present?
-      @courses = @courses.global_search(params[:query])
+      @courses = Course.global_search(params[:query])
     elsif params[:location].present?
       @courses = Course.near(params[:location], 20)
     else

@@ -144,10 +144,15 @@ course_five.photo.attach(io: file, filename: 'gardening.png', content_type: 'ima
 puts "#{Course.all.count} courses were created"
 
 booking_one = Booking.create!(user: teacher_three, course: course_one, start_date: Date.today, end_date: Date.today + 5)
-booking_two = Booking.create!(user: teacher_three, course: course_one, start_date: Date.today, end_date: Date.today + 5)
-Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
-Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
+booking_two = Booking.create!(user: teacher_two, course: course_one, start_date: Date.today, end_date: Date.today + 5)
+booking_three = Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
+booking_four = Booking.create!(user: student_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
+booking_five = Booking.create!(user: teacher_two, course: course_four, start_date: Date.today, end_date: Date.today + 5)
+
 
 puts "#{Booking.all.count} bookings were created"
 Review.create!(content: less_text, rating: 1.0, booking_id: booking_one.id)
 Review.create!(content: less_text, rating: 3.0, booking_id: booking_two.id)
+Review.create!(content: less_text, rating: 4.0, booking_id: booking_three.id)
+Review.create!(content: less_text, rating: 2.0, booking_id: booking_four.id)
+Review.create!(content: less_text, rating: 1.0, booking_id: booking_five.id)
