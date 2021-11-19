@@ -57,11 +57,13 @@
       </div>
 
       <%= simple_form_for [@course, @booking = Booking.new] do |f| %>
-        <%= f.input :start_date, as: :date, html5: true, label: false%>
-        <%= f.input :end_date, as: :date, html5: :true, label: false%>
+        <div class="d-flex justify-content-between">
+        <%= f.input :start_date, as: :date, html5: true, label: false, input_html: {class: "datepicker", placeholder: "Start date"}%>
+        <%= f.input :end_date, as: :date, html5: :true, label: false, input_html: {class: "datepicker", placeholder: "End date"}%>
+        </div>
         <div id="calculate-container">
           <div id="button-calculate-container">
-          <%= link_to "Calculate Price","#", class: 'calculate-price price-button'%>
+          <%= link_to "Calculate Price","#", class: 'calculate-price'%>
           </div>
         <div class='price-calculator-container d-flex justify-content-around'>
           <span class="total-days"></span>
