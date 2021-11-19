@@ -3,7 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :course
 
   has_one :review, dependent: :destroy
-  enum status: [:pending, :confirmed, :canceled, :done]
+  enum status: [:pending, :confirmed, :cancelled, :done]
 
   before_create :set_total_price
 
