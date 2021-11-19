@@ -1,3 +1,7 @@
+.rocket-animation-canvas{
+  height: 100vh;
+}
+
 .booking-confirmation-container {
   width: 850px;
   height: 630px;
@@ -11,19 +15,31 @@
   box-shadow: lightgray;
   border: 1px solid, lightgray;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  .booking-confirmation-info {
+  align-items: baseline;
+  flex-grow: 1;
+}
+
+  .bottom-text {
+    margin-left: 4px;
+  }
+
   h1 {
     font-size: 38.2px;
     text-align: left;
   }
+
   h2 {
-    font-size:1.8em;
+    font-size:1.7em;
     margin: 0px auto 10px;
     color: $purple;
   }
+
   h3 {
     padding-bottom: 4px;
     font-size: 17px;
   }
+
   .button {
     margin-top: 40px;
     width: 450px!important;
@@ -34,9 +50,11 @@
   a {
     color: white!important;
     text-decoration: none;
+  }
+
   small a {
     text-decoration: none;
-    color: $purple;
+    color: $purple !important;
     margin-right: 15px;
     &:hover {
       color: $blue;
@@ -73,14 +91,4 @@
     // box-shadow: 0px 0px 2px 2px purple;
     transform: translateY(-2px);
   }
-}
-
-.booking-confirmation-info {
-  align-items: baseline;
-  flex-grow: 1;
-}
-
-.bottom-text {
-  margin-left: 4px;
-}
 }
