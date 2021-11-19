@@ -1,8 +1,5 @@
 <div class="my-card-container" id="my-card-container">
 
-  <% if @courses.empty? %>
-    <h3 id="no-results-header">Unfortunately, no courses matched your search criteria. Maybe create an own one? 🤓</h3>
-  <% else %>
   <h2 id="my-header">Discover our courses!</h2>
   <div class="map-card-container">
   <div class="my-card-wrapper" id="map-wrapper">
@@ -35,7 +32,6 @@
         </div>
       <% end %>
     <% end  %>
-  <% end  %>
 
   </div>
       <div id="map"

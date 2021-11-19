@@ -19,7 +19,10 @@ class CoursesController < ApplicationController
     end
 
     @markers = @courses.geocoded.map do |course|
-      { lat: course.latitude, lng: course.longitude }
+      { lat: course.latitude,
+        lng: course.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { course: course }),
+        image_url: helpers.asset_url('rocket-only.png') }
     end
   end
 

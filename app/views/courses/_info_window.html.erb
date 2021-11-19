@@ -1,0 +1,8 @@
+<%= link_to course_path(course) do %>
+  <div class="maxi-pop-up-main">
+    <%= cl_image_tag course.photo.key, class: "maxi-pop-up-img" if course.photo.attached? %>
+    <strong><h3 id="pop-up-header"><%= course.name %></h3></strong>
+  </div>
+  <p> <%= course.description %></p>
+  <em><p>🗺 <%= course.location %></p></em>
+<% end %>
