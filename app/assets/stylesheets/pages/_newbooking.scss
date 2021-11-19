@@ -30,6 +30,10 @@
     color: white!important;
     text-decoration: none;
   }
+
+  a {
+    color: white!important;
+    text-decoration: none;
   small a {
     text-decoration: none;
     color: $purple;
@@ -46,6 +50,9 @@
   justify-content: space-between;
   align-items: baseline;
   flex-grow: 1;
+  a {
+    color: white!important;
+  }
 }
 
 .booking-confirmation-img {
@@ -71,4 +78,8 @@
 .booking-confirmation-info {
   align-items: baseline;
   flex-grow: 1;
+}
+
+.bottom-text {
+  margin-left: 4px;
 }

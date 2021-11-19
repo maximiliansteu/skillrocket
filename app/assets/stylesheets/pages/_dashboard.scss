@@ -1,0 +1,109 @@
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 25px;
+}
+
+.dashboard-right-half {
+  width: 50%;
+  margin: 12.5px;
+}
+
+.dashboard-left-half {
+  width: 50%;
+  margin: 12.5px;
+}
+
+.dashboard-pending {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid lightgray;
+  padding: 25px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    padding-bottom: 13px;
+  }
+}
+
+.dashboard-cancelled {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid lightgray;
+  padding: 25px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    padding-bottom: 13px;
+  }
+}
+
+.dashboard-teach {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid lightgray;
+  padding: 25px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    padding-bottom: 13px;
+  }
+}
+
+.dashboard-done {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid lightgray;
+  padding: 25px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    padding-bottom: 13px;
+  }
+}
+
+.dashboard-card {
+  display: flex;
+  width: auto;
+  height: 170px;
+    p {
+    height: auto;
+    padding: 1px;
+    margin: 1px;
+    }
+}
+
+.dashboard-card-img {
+  height: 150px;
+  width: 250px;
+  border-radius: 7px;
+}
+
+.dashboard-card-info {
+  height: 150px;
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 30px;
+  p {
+    padding: 0px!important;
+    margin: 0px!important;
+    font-size: 10px;
+  }
+  h4 {
+    padding: 0px!important;
+    margin: 0px!important;
+    font-size: 13px;
+  }
+  h2 {
+    padding: 0px!important;
+    margin: 0px!important;
+    font-size: 17px;
+  }
+}
+
+.dashboard-card-info-split {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}

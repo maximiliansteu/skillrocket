@@ -1,39 +1,124 @@
-<div class="max-booking-container">
-  <div class="max-bookings">
-  <h3 id="max-booking-header">The courses you've booked</h3>
-    <% @bookings.each do |booking| %>
-      <div class="booking-testing">
-        <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img" %>
-        <div class="max-booking-info">
-          <strong><p><%= booking.course.name %></p></strong>
-          <p>💰<%= booking.total_price %> €</p>
-          <p><%= booking.start_date %></p>
-          <p><%= booking.end_date %></p>
-          <p><%= booking.status %></p>
+<div class="dashboard-container">
+  <div class = "dashboard-left-half">
+    <div class= "dashboard-pending">
+      <h3>Your pending bookings</h3>
+      <% @bookings.each do |booking| %>
+        <div class="dashboard-card">
+          <div class="dashboard-card-img">
+            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img" %>
+          </div>
+          <div class= "dashboard-card-info">
+            <h4><strong>Course name:</strong></h4>
+            <h2><%= booking.course.name %></h2>
+            <div class = dashboard-card-info-split>
+              <div class= "dashboard-card-info-left">
+                <p><strong>Course starts:</strong></p>
+                <p><%= booking.start_date %></p>
+                <p><strong>Course ends:</strong></p>
+                <p><%= booking.end_date %></p>
+              </div>
+              <div class= "dashboard-card-info-right">
+                <p><strong>Course price:</strong></p>
+                <p><%= booking.total_price %> €</p>
+                <p><strong>Booking status:</strong></p>
+                <p style="color: orange;"><%= booking.status %></p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    <% end  %>
+      <% end %>
+    </div>
+    <div class="dashboard-cancelled">
+      <h3>Bookings cancelled by the host</h3>
+      <% @bookings.each do |booking| %>
+        <div class="dashboard-card">
+          <div class="dashboard-card-img">
+            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+          </div>
+          <div class= "dashboard-card-info">
+            <h4><strong>Course name:</strong></h4>
+            <h2><%= booking.course.name %></h2>
+            <div class = dashboard-card-info-split>
+              <div class= "dashboard-card-info-left">
+                <p><strong>Course starts:</strong></p>
+                <p><%= booking.start_date %></p>
+                <p><strong>Course ends:</strong></p>
+                <p><%= booking.end_date %></p>
+              </div>
+              <div class= "dashboard-card-info-right">
+                <p><strong>Course price:</strong></p>
+                <p><%= booking.total_price %> €</p>
+                <p><strong>Booking status:</strong></p>
+                <p style="color: red;"><%= booking.status %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="my-received-bookings">
-    <h3 id="max-booking-header">Bookings for classes you teach</h3>
-    <% @received_bookings.each do |booking| %>
-      <div class="booking-testing" >
-        <%= cl_image_tag booking.course.photo.key, class: "max-booking-class-img"%>
-        <div class="max-booking-info">
-          <strong><p><%= booking.course.name %></p></strong>
-          <p>💰<%= booking.total_price %> €</p>
-          <p><%= booking.start_date %></p>
-          <p><%= booking.end_date %></p>
-          <p><%= booking.status %></p>
-          <%= link_to booking_path(booking, {status: "confirmed"}), method: :patch do %>
-          <i class="fas fa-check maxi-icon"></i>
-          <% end %>
-          <%= link_to booking_path(booking, {status: "canceled"}), method: :patch do %>
-          <i class="fas fa-ban maxi-icon"></i>
-          <% end %>
+  <div class = "dashboard-right-half">
+    <div class= "dashboard-teach">
+      <h3> Bookings for courses you teach</h3>
+      <% @received_bookings.each do |booking| %>
+        <div class="dashboard-card">
+          <div class="dashboard-card-img">
+            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+          </div>
+          <div class= "dashboard-card-info">
+            <h4><strong>Course name:</strong></h4>
+            <h2><%= booking.course.name %></h2>
+            <div class = dashboard-card-info-split>
+              <div class= "dashboard-card-info-left">
+                <p><strong>Course starts:</strong></p>
+                <p><%= booking.start_date %></p>
+                <p><strong>Course ends:</strong></p>
+                <p><%= booking.end_date %></p>
+              </div>
+              <div class= "dashboard-card-info-right">
+                <p><strong>Course price:</strong></p>
+                <p><%= booking.total_price %> €</p>
+                <p><strong>Booking status:</strong></p>
+                <p style="color: blue;"><%= booking.status %></p>
+                <%= link_to booking_path(booking, {status: "confirmed"}), method: :patch do %>
+                <i class="fas fa-check maxi-icon"></i>
+                <% end %>
+                <%= link_to booking_path(booking, {status: "cancelled"}), method: :patch do %>
+                <i class="fas fa-ban maxi-icon"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    <% end  %>
+      <% end  %>
+    </div>
+    <div class="dashboard-done">
+      <h3>Courses you've attended in the past</h3>
+      <% @bookings.each do |booking| %>
+        <div class="dashboard-card">
+          <div class="dashboard-card-img">
+            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+          </div>
+          <div class= "dashboard-card-info">
+            <h4><strong>Course name:</strong></h4>
+            <h2><%= booking.course.name %></h2>
+            <div class = dashboard-card-info-split>
+              <div class= "dashboard-card-info-left">
+                <p><strong>Course starts:</strong></p>
+                <p><%= booking.start_date %></p>
+                <p><strong>Course ends:</strong></p>
+                <p><%= booking.end_date %></p>
+              </div>
+              <div class= "dashboard-card-info-right">
+                <p><strong>Course price:</strong></p>
+                <p><%= booking.total_price %> €</p>
+                <p><strong>Booking status:</strong></p>
+                <p style="color: orange;"><%= booking.status %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end  %>
+    </div>
   </div>
 </div>
