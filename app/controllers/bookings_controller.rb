@@ -31,6 +31,10 @@ class BookingsController < ApplicationController
 
   def update
     # @booking.status = "confirmed"
+    # if @booking.end_date <= Date.new && @booking.status == "confirmed"
+    #   @booking.status = "done"
+    # end
+
     if @booking.update(status: params[:status])
       redirect_to dashboard_path
     end

@@ -7,7 +7,9 @@
         <% if booking.status == "pending" %>
         <div class="dashboard-card">
           <div class="dashboard-card-img">
-            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img" %>
+            <%= link_to course_path(booking.course) do %>
+              <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img" %>
+            <% end %>
           </div>
           <div class= "dashboard-card-info">
             <h4><strong>Course name:</strong></h4>
@@ -32,12 +34,14 @@
       <% end %>
     </div>
     <div class="dashboard-confirmed">
-      <h3>Confirmed courses</h3>
+      <h3>Confirmed bookings</h3>
       <% @bookings.each do |booking| %>
         <% if booking.status == "confirmed" %>
         <div class="dashboard-card">
           <div class="dashboard-card-img">
-            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <%= link_to course_path(booking.course) do %>
+              <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <% end  %>
           </div>
           <div class= "dashboard-card-info">
             <h4><strong>Course name:</strong></h4>
@@ -67,7 +71,9 @@
         <% if booking.status == "cancelled" %>
         <div class="dashboard-card">
           <div class="dashboard-card-img">
-            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <%= link_to course_path(booking.course) do %>
+              <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <% end  %>
           </div>
           <div class= "dashboard-card-info">
             <h4><strong>Course name:</strong></h4>
@@ -92,19 +98,28 @@
       <% end %>
     </div>
     <div class="dashboard-done">
-      <h3>Past courses</h3>
+      <h3>Past bookings</h3>
       <% @bookings.each do |booking| %>
-        <% if booking.end_date <= Date.new && booking.status == "confirmed" %>
+        <% if booking.end_date <= Date.today && booking.status == "confirmed" %>
           <% booking.status = "done" %>
         <% end %>
         <% if booking.status == "done" %>
         <div class="dashboard-card">
           <div class="dashboard-card-img">
-            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <%= link_to course_path(booking.course) do %>
+              <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <% end %>
           </div>
           <div class= "dashboard-card-info">
-            <h4><strong>Course name:</strong></h4>
-            <h2><%= booking.course.name %></h2>
+            <div class= "dashboard-review">
+              <div>
+                <h4><strong>Course name:</strong></h4>
+                <h2><%= booking.course.name %></h2>
+              </div>
+              <div>
+                <%= link_to 'Review course', new_course_booking_review_path(booking.course, booking), class: 'button' %>
+              </div>
+            </div>
             <div class = dashboard-card-info-split>
               <div class= "dashboard-card-info-left">
                 <p><strong>Course starts:</strong></p>
@@ -128,12 +143,14 @@
   <div class = "dashboard-right-half">
   <h1>Recieved bookings</h1>
     <div class= "dashboard-teach">
-      <h3> Pending bookings for your courses</h3>
+      <h3> Bookings for your courses</h3>
       <% @received_bookings.each do |booking| %>
         <% if booking.status == "pending" || booking.status == "confirmed" %>
         <div class="dashboard-card">
           <div class="dashboard-card-img">
-            <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <%= link_to course_path(booking.course) do %>
+              <%= cl_image_tag booking.course.photo.key, class: "dashboard-card-img"%>
+            <% end %>
           </div>
           <div class= "dashboard-card-info">
             <h4><strong>Course name:</strong></h4>
