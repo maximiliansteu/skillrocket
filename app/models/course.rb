@@ -1,13 +1,13 @@
 class Course < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_many :reviews, through: :bookings
 
   CATEGORIES = ["Sports",
                 "Coding",
                 "Writing",
-                "Mental Health",
+                "Health",
                 "Business",
                 "Gardening",
                 "Fitness",
@@ -28,7 +28,7 @@ class Course < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
-    against: [ :name, :description ],
+    against: [ :name, :description, :category ],
     associated_against: {
       user: [ :first_name, :last_name ]
     },

@@ -1,11 +1,19 @@
-<div class=booking-confirmation-container>
-  <h1>Your booking is confirmed</h1>
-  <h3>Below is your booking info.</h3>
-  <%= cl_image_tag @booking.course.photo.key, class: "booking-confirmation-img" %>
-  <div class="booking-confirmation-column">
-    <p><strong>Course name:</strong></p>
-    <p><%= @booking.course.name %></p>
+<div class="rocket-animation-canvas">
+  <div class="booking-confirmation-container" style="z-index: 9999">
+    <h2 style="">We have recieved your booking request for "<%= @booking.course.name %>"!</h2>
+    <h3>Check your booking info below:</h3>
+    <%= cl_image_tag @booking.course.photo.key, class: "booking-confirmation-img" %>
+    <div class="booking-confirmation-column" style="margin-top:0">
+      <p style="margin-bottom: 0">Course starts on <strong><%= @booking.start_date %></strong> to <strong><%= @booking.end_date %></strong>.</p>
+    </div>
+    <div class="booking-confirmation-column" style="margin-top: 0">
+      <p>Right now your booking request is <span class="status" style="color: orange"><%= @booking.status.capitalize %></span>.
+      But don't worry, you'll be notified when the teacher has accepted your offer.</p>
+    </div>
+
+    <%= link_to 'See all your bookings', dashboard_path, class: 'button', style: "100%" %> <small style="float: right;">Did something go wrong? <a href="mailto:fake123@mail.com">Contact us</a></small>
   </div>
+
   <div class="booking-confirmation-column">
     <p><strong>Course price:</strong></p>
     <p><%= @booking.total_price %> €</p>
@@ -24,4 +32,10 @@
   </div>
   <p class="bottom-text">You'll be notified when the teacher has accepted your offer</p>
   <p style="width: 200px; color: white" class="button"> <%= link_to 'See all your bookings', dashboard_path  %> </p>
+  <%= image_tag "rocket-only.png", class: 'javi-animated-rocket javi-extra-top' %>
+  <%= image_tag "rocket-only.png", class: 'javi-animated-rocket javi-top' %>
+  <%= image_tag "rocket-only.png", class: 'javi-animated-rocket javi-middle' %>
+  <%= image_tag "rocket-only.png", class: 'javi-animated-rocket javi-extra' %>
+  <%= image_tag "rocket-only.png", class: 'javi-animated-rocket javi-bottom' %>
+
 </div>

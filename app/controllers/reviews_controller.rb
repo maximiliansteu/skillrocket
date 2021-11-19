@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   end
 
   def new
-    @course = Course.find(params[:booking_id])
+    @course = Course.find(params[:course_id])
     @booking = Booking.find(params[:booking_id])
     @review = Review.new
   end

@@ -1,18 +1,24 @@
 .booking-confirmation-container {
-  width: 500px;
-  height: 800px;
+  width: 850px;
+  height: 630px;
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 0px;
   background-color: white;
   padding: 25px;
-  padding-top: 50px;
+  padding-top: 30px;
   border-radius: 10px;
   box-shadow: lightgray;
   border: 1px solid, lightgray;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h1 {
     font-size: 38.2px;
     text-align: left;
+  }
+  h2 {
+    font-size:1.8em;
+    margin: 0px auto 10px;
+    color: $purple;
   }
   h3 {
     padding-bottom: 4px;
@@ -24,9 +30,17 @@
     color: white!important;
     text-decoration: none;
   }
+
   a {
     color: white!important;
     text-decoration: none;
+  small a {
+    text-decoration: none;
+    color: $purple;
+    margin-right: 15px;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
@@ -42,7 +56,7 @@
 }
 
 .booking-confirmation-img {
-  height: 200px;
+  height: 350px;
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
