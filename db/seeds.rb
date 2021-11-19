@@ -16,17 +16,17 @@ User.destroy_all
 puts "insert data"
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor. Integer vestibulum turpis eu eros laoreet scelerisque. Vivamus ligula quam, eleifend vel dapibus a, ultricies sit amet sem.
                            Quisque eleifend, neque sed sagittis lacinia, nunc felis laoreet purus, in vehicula massa ante non odio. Vivamus purus dui, maximus non viverra sed, egestas at risus. Sed sed molestie magna, non feugiat felis. Mauris ornare mauris id auctor tempor. Quisque convallis malesuada consectetur."
-
+less_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum est quis erat mattis pharetra. Proin at hendrerit ipsum, aliquet placerat dolor."
 student_one = User.create!(email: "student@fount.io",
                            password: "student123",
                            first_name: "Tom",
-                           last_name: "Student",
+                           last_name: "York",
                            biography: text,
-                          country: "Spain",
-                          city: "Barcelona",
-                          instagram_handle: "https://instagram.com",
-                          linked_in_handle: "https://linkedin.com",
-                          homepage_url: "https://google.com")
+                           country: "Spain",
+                           city: "Barcelona",
+                           instagram_handle: "https://instagram.com",
+                           linked_in_handle: "https://linkedin.com",
+                           homepage_url: "https://google.com")
 
 file = URI.open('https://source.unsplash.com/rDEOVtE7vOs')
 student_one.photo.attach(io: file, filename: 'student_one.png', content_type: 'image/png')
@@ -36,11 +36,11 @@ teacher_one = User.create!(email: "teacher@fount.io",
                            first_name: "Tim",
                            last_name: "Teacher",
                            biography: text,
-                            country: "Spain",
-                            city: "Barcelona",
-                            instagram_handle: "https://instagram.com",
-                            linked_in_handle: "https://linkedin.com",
-                            homepage_url: "https://google.com")
+                           country: "Spain",
+                           city: "Barcelona",
+                           instagram_handle: "https://instagram.com",
+                           linked_in_handle: "https://linkedin.com",
+                           homepage_url: "https://google.com")
 
 file = URI.open('https://source.unsplash.com/X6Uj51n5CE8')
 teacher_one.photo.attach(io: file, filename: 'teacher_one.png', content_type: 'image/png')
@@ -143,6 +143,10 @@ course_five.photo.attach(io: file, filename: 'gardening.png', content_type: 'ima
 
 puts "#{Course.all.count} courses were created"
 
-Booking.create!(user: student_one, course: course_one, start_date: Date.today, end_date: Date.today + 5)
+booking_one = Booking.create!(user: teacher_three, course: course_one, start_date: Date.today, end_date: Date.today + 5)
 Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
+Booking.create!(user: teacher_one, course: course_four, start_date: Date.today, end_date: Date.today + 5)
+
 puts "#{Booking.all.count} bookings were created"
+Review.create!(content: less_text, rating: 1.0, booking_id: booking_one.id)
+Review.create!(content: less_text, rating: 3.0, booking_id: booking_two.id)

@@ -1,10 +1,9 @@
 <div class="relative">
   <div class="show-hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<%= cl_image_path @course.photo.key %>');">
-    <span><%= link_to  @course.category, "#", class: "category-link" %></span>
+    <p class="category-link-container"><span><%= link_to "All", categories_path, class: "category-link" %></span> / <span><%= link_to  @course.category, "./?query=#{@course.category.gsub(/\s+/, "").downcase}&commit=Search", class: "category-link" %></span></p>
     <div class="show-hero-text">
       <h1><%= @course.name %></h1>
       <p><%= @course.description %></p>
-      <%= link_to 'Join course now', "#", class: " button" %>
     </div>
   </div>
   <div class="wrapper">
@@ -53,7 +52,20 @@
         <div class="d-flex justify-content-betweend">
         <p style="font-size: 1.2em" id="course-price"><%= @course.price%></p><p>€ / day</p>
         </div>
-        <p style="font-size: 1.2em"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0</p>
+        <p style="font-size: 1.2em">
+
+        <% total_rating = 0 %>
+        <% @reviews.each do |review| %>
+          <% total_rating += review.rating.to_f %>
+        <% end %>
+          <% final_rating = total_rating / @reviews.count  %>
+          <% final_rating.round.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <% (5 - final_rating.to_i).times do %>
+            <i class="far fa-star"></i>
+          <% end %>
+          <%= total_rating / @reviews.count %>
       </div>
 
       <%= simple_form_for [@course, @booking = Booking.new] do |f| %>
@@ -88,14 +100,18 @@
       <h2 style="text-align: center;">Reviews</h2>
       <% @reviews.each do |review| %>
         <div class="review">
-            <%= cl_image_tag review.booking.user.photo.key, class: "avatar-large", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag review.booking.user.photo.key %>
           <div class="review-content">
           <div>
             <p class="review-rating">
             <% rating = review.rating.to_i %>
             <% rating.times do %>
               <i class="fas fa-star"></i>
+              <% (5 - rating).times do %>
+               <i class="far fa-star"></i>
+              <% end %>
             <% end %>
+
             <%= review.rating %></p>
             </div>
             <p><%= review.content %></p>
