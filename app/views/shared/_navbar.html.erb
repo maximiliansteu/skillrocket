@@ -20,6 +20,11 @@
           class: "maxi-form-control-home", id:"maxi-form-control-nav",
           placeholder: "   Find a course"
         %>
+        <%= text_field_tag :location,
+        params[:location],
+        class: "maxi-form-control-nav-location maxi-form-control-home-location",
+        placeholder: "   Search for location"
+        %>
         <%= submit_tag "Search", class: "button" %>
       <% end %>
       </li>
@@ -35,7 +40,7 @@
     <ul class="navbar-nav mr-auto" id="maxi-list-avatar">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Become a teacher!", new_course_path, class: "maxi-nav-link button", title: "Create yout own course" %>
+          <%= link_to "+ Add course", new_course_path, class: "maxi-nav-link button", title: "Create yout own course" %>
         </li>
         <li class="nav-item">
           <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>

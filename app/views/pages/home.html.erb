@@ -11,6 +11,11 @@
         class: "maxi-form-control-home",
         placeholder: "   Find a course"
       %>
+      <%= text_field_tag :location,
+        params[:location],
+        class: "maxi-form-control-home-location",
+        placeholder: "   Search for location"
+      %>
       <%= submit_tag "Search", class: "button" %>
     <% end %>
 

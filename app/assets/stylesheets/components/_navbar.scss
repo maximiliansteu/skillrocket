@@ -90,3 +90,22 @@
 #maxi-form-control-nav{
   background-color: #f1f0f0;
 }
+
+.maxi-form-control-nav-location {
+  height: 41px;
+  border-radius: 0px;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: solid #8080801f 2px;
+  width: 15vw;
+  background-color: #f1f0f0;
+}
+
+.algolia-places {
+  width: auto;
+}
+
+a.maxi-nav-link {
+  background-color: lightgray;
+}

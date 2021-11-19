@@ -27,6 +27,8 @@ body {
 .maxi-form-control-home {
   border-radius: 10px 0px 0px 10px;
   border: 0px;
+  padding-left: 20px;
+  width: 15vw;
 }
 
 .hero-text {
@@ -35,4 +37,17 @@ body {
     font-style: italic;
     margin-bottom: 30px;
   }
+}
+
+
+.maxi-form-control-home-location {
+  height: 41px;
+  border-radius: 0px;
+  border-top: none;
+  border-bottom: none;
+  width: 15vw;
+}
+
+.algolia-places {
+  width: auto;
 }
