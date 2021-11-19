@@ -60,15 +60,19 @@
   }
 }
 
+.category-link-container {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
 .category-link {
-  font-size: 1rem;
   transition: color .4s linear;
   text-decoration: none;
   font-family: inherit;
   padding: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
   color: #ffffff;
   &:hover {
     color: #2541fc;
@@ -164,4 +168,8 @@
   display: flex;
   padding-bottom: 50px;
   flex-wrap: wrap;
+}
+
+.fas.fa-star, .far.fa-star {
+  color: $purple;
 }
