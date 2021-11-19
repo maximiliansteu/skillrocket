@@ -28,6 +28,7 @@ import { initPriceCalculation } from "../components/init_price_calculation";
 
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from "../plugins/flatpickr";
+import { previewImageOnFileSelect } from "../components/init_upload_photo";
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -35,7 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   statusColor();
   initPriceCalculation();
   initFlatpickr();
-
+  previewImageOnFileSelect();
 })
 
 const statusColor = () => {
